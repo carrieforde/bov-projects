@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Number Facts</title>
+    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Playfair+Display:700" rel="stylesheet">
+    <style>
+        body {
+            align-items: center;
+            background-color: #EAEAEA;
+            color: #183642;
+            display: flex;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 2em;
+            height: 100vh;
+            justify-content: center;
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #313D5A;
+            font-family: 'Playfair Display', serif;
+        }
+
+        #fact {
+            margin-bottom: 1.5em;
+        }
+
+        .num {
+            color: #3581B8;
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            padding: 0.1em;
+        }
+
+        section {
+            margin: 0 auto;
+            max-width: 100%;
+            width: 1100px;
+        }
+
+        button {
+            border: 0;
+            background-color: #73628A;
+            color: #fff;
+            display: inline-block;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            font-size: 0.75em;
+            padding: 0.5em 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <header>
+            <h2>Did you know?</h2>
+        </header>
+        <div id="fact"></div>
+        <footer><button id="newFact">Get new fact</button></footer>
+    </section>
+    <script>
+        (function() {
+            'use strict';
+            var newFact = document.getElementById('newFact');
+
+            function randomNum(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function getFact() {
+                let text = '',
+                    num = randomNum(1, 200),
+                    fact = document.getElementById('fact'),
+                    newFact = new Promise((resolve, reject) => {
+                        let xhr = new XMLHttpRequest();
+                        xhr.onload = () => {
+                            if (xhr.status === 200) {
+                                resolve(text = xhr.response);
+                            }
+                        };
+                        xhr.onerror = () => {
+                            reject(text = `Hmm...it appears something went wrong. Try reloading your browser.`);
+                        };
+                        xhr.open('GET', 'http://numbersapi.com/' + num);
+                        xhr.send();
+                    });
+                newFact.then(message => {
+                    text = text.replace(num, '<span class="num">' + num + '</span>');
+                    fact.innerHTML = text;
+                }, error => {
+                    fact.innerHTML = text;
+                });
+            }
+            newFact.addEventListener('click', getFact);
+            window.addEventListener('load', getFact);
+        })();
+    </script>
+</body>
+
+</html>

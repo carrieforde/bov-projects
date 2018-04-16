@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LocalStorage</title>
+    <style>
+        :root {
+            --bg-color: #fff;
+            --text-color: #333;
+            --font-size: 1em;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: var(--font-size);
+            margin: 0;
+        }
+
+        .page {
+            margin: 0 auto;
+            max-width: 100%;
+            padding: 20px;
+            width: 960px;
+        }
+
+        img {
+            border-radius: 50%;
+            display: block;
+            float: right;
+            margin-left: 10px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li+li {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="welcome-banner"></div>
+        <main class="page__content">
+            <img src="https://picsum.photos/250" alt="">
+            <p>Lorem ipsum dolor sit amet, vidisse urbanitas ius eu, menandri delicata id mea, eos doctus corpora sententiae
+                cu. In sit latine bonorum, qui cu homero patrioque. Sadipscing adversarium te vim, tincidunt concludaturque
+                in vix. Ne eos omnes exerci putant, eum at ceteros comprehensam.</p>
+
+            <p>Choro maiorum cu mel, vel idque impetus forensibus cu, at est mundi doming ocurreret. Te ancillae rationibus
+                vituperatoribus mel, dicunt suscipit aliquando eu per, eos eu mutat senserit. Pro partem animal an, vis no
+                brute fabulas percipitur. At maluisset torquatos eos, vis ne solet malorum pertinacia.</p>
+
+            <p>An ius virtute epicuri. Ullum eruditi rationibus in pro, vim no brute ipsum vocibus, eos id graeci maiorum consulatu.
+                Dignissim urbanitas ex per. Nec affert efficiantur ei. His corpora perpetua ex, eu omnis putent vel.</p>
+
+            <p>Diam iudicabit corrumpit vix ad. Has maiorum accusata eu. An vis idque choro luptatum. Aeque nonumy pri te, nam
+                ei nonumes eloquentiam. Mel ancillae accusata ex, at duo dolorum probatus, laoreet tractatos duo ne. Te eos
+                fuisset perpetua, ut timeam voluptaria vel. An tollit scaevola menandri duo, mediocrem erroribus gloriatur
+                id vix.</p>
+
+            <p>Has nibh verear persequeris ex, mutat postulant ne mea. Per ei facer detracto. Amet sanctus eum ne, an tota oblique
+                habemus sit, quo ex mutat menandri explicari. Eleifend aliquando his at, in stet simul complectitur nam.
+                Noster liberavisse vel id, sit in pertinacia scriptorem, posse primis sadipscing te vel.</p>
+        </main>
+        <aside class="sidebar">
+            <form method="GET" id="siteOptions">
+                <ul>
+                    <li>
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name">
+                    </li>
+                    <li>
+                        <label for="bgColor">Background Color</label>
+                        <input type="color" id="bgColor" name="bgColor" value="#ffffff">
+                    </li>
+                    <li>
+                        <label for="textColor">Text Color</label>
+                        <input type="color" id="textColor" name="textColor" value="#333333">
+                    </li>
+                    <li>
+                        <label for="fontSize">Text Size</label>
+                        <select name="fontSize" id="fontSize">
+                            <option value="1em">Normal</option>
+                            <option value="0.75em">Small</option>
+                            <option value="1.25em">Large</option>
+                            <option value="1.5em">Extra Large</option>
+                        </select>
+                    </li>
+                    <li>
+                        <input type="submit" id="submit" value="Save Preferences">
+                        <input type="reset" id="reset" value="Reset Preferences">
+                    </li>
+                </ul>
+            </form>
+        </aside>
+    </div>
+    <script>
+        (function () {
+            'use strict';
+
+            const preferences = document.getElementById('siteOptions'),
+                name = document.getElementById('name'),
+                bgColor = document.getElementById('bgColor'),
+                textColor = document.getElementById('textColor'),
+                fontSizes = document.querySelectorAll('#fontSize option');
+
+            let fontSize;
+
+            /**
+             * Save preferences to local storage.
+             *
+             * @param  {object}  event  The event object.
+             */
+            function savePreferences(event) {
+
+                event.preventDefault();
+
+                fontSizes.forEach(size => {
+                    if (size.selected) {
+                        fontSize = size.value;
+                    }
+                });
+
+                localStorage.setItem('name', name.value);
+                localStorage.setItem('bgColor', bgColor.value);
+                localStorage.setItem('textColor', textColor.value);
+                localStorage.setItem('fontSize', fontSize);
+                updateTheme();
+            }
+
+            /**
+             * Makes visual updates to the page.
+             */
+            function updateTheme() {
+
+                var welcome = document.querySelector('.welcome-banner');
+
+                if (localStorage.getItem('name')) {
+                    welcome.innerHTML = 'Welcome back ' + localStorage.getItem('name') + '!';
+                } else {
+                    welcome.innerHTML = '';
+                }
+
+                document.documentElement.style.setProperty('--bg-color', localStorage.getItem('bgColor'));
+                document.documentElement.style.setProperty('--text-color', localStorage.getItem('textColor'));
+                document.documentElement.style.setProperty('--font-size', localStorage.getItem('fontSize'));
+            }
+
+            /**
+             * Updates the input values to match what's in local storage.
+             */
+            function updateValues() {
+
+                if (localStorage.getItem('name')) {
+                    name.value = localStorage.getItem('name');
+                }
+
+                if (localStorage.getItem('bgColor')) {
+                    bgColor.value = localStorage.getItem('bgColor');
+                }
+
+                if (localStorage.getItem('textColor')) {
+                    textColor.value = localStorage.getItem('textColor');
+                }
+
+                if (localStorage.getItem('fontSize')) {
+
+                    fontSizes.forEach(size => {
+                        if (size.value === localStorage.getItem('fontSize')) {
+                            size.selected = true;
+                        }
+                    });
+                }
+            }
+
+            /**
+             * Resets preferences, clearing local storage.
+             *
+             * @param {object}  event  The event object.
+             */
+            function resetPreferences(event) {
+
+                event.preventDefault();
+
+                bgColor.value = '#ffffff';
+                textColor.value = '#333333';
+
+                localStorage.removeItem('name');
+                localStorage.removeItem('bgColor');
+                localStorage.removeItem('textColor');
+                localStorage.removeItem('fontSize');
+
+                updateTheme();
+            }
+
+            // Add event listeners.
+            preferences.addEventListener('submit', savePreferences);
+            preferences.addEventListener('reset', resetPreferences);
+            window.addEventListener('load', updateTheme);
+            window.addEventListener('load', updateValues);
+        })();
+    </script>
+</body>
+
+</html>
