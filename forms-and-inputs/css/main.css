@@ -1,0 +1,501 @@
+/**
+ * Styles
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #211d23;
+	font-family: 'Roboto', sans-serif;
+}
+
+.page__header {
+	background-color: #3D96B6;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	min-height: 200px;
+	padding: 20px;
+	text-align: center;
+}
+
+.page__header h1 {
+	letter-spacing: 0.02em;
+	margin-top: 0;
+}
+
+.page__header a {
+	color: white;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.arrow {
+	display: inline-block;
+	margin-right: 3px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.page__header a:hover .arrow {
+	transform: translateX(-5px);
+}
+
+.page__content {
+	align-items: center;
+	background-color: #f1ece4;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+form {
+	background-color: #fff;
+	border: 2px solid #ccc;
+	margin-top: 60px;
+	max-width: 100%;
+	padding: 20px;
+	width: 350px;
+}
+
+form ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+form li + li {
+	margin-top: 20px;
+}
+
+fieldset {
+	border: 2px solid #ccc;
+	border-radius: 3px;
+	padding: 20px;
+}
+
+legend {
+	color: #3d96b6;
+	font-weight: 700;
+	padding: 0.25em;
+}
+
+label {
+	display: block;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.form-footer {
+	margin-top: 20px;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"],
+input[type="week"] {
+	border: 1px solid #999;
+	border-radius: 3px;
+	padding: calc(0.5em - 0.5px);
+	width: 100%;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="text"]:focus,
+input[type="url"]:focus,
+input[type="color"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus {
+	border-color: #3d96b6;
+	outline: 0;
+}
+
+.invalid,
+input[type="email"]:invalid {
+	border-color: #f44336 !important;
+}
+
+.valid {
+	border-color: #48a86f !important;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: url('../images/caret-down.png') no-repeat calc(100% - 8px) center;
+	background-size: 12px;
+	border: 1px solid #999;
+	padding: calc(0.5em - 0.5px) 1.5em calc(0.5em - 0.5px) 0.5em;
+}
+
+select:focus {
+	outline: 0;
+	border-color: #3d96b6;
+}
+
+/* Create classes for radio & checkbox styles (applies to label) */
+.checkbox:after,
+.radio:before,
+.radio-after:after {
+	border: 1px solid #999;
+	border-radius: 50px;
+	content: '';
+	display: inline-block;
+	height: 16px;
+	margin-bottom: 4px;
+	margin-right: 10px;
+	vertical-align: middle;
+	width: 16px;
+}
+
+.checkbox:after,
+.radio-after:after {
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+
+input[type="checkbox"]:checked + .checkbox:after,
+input[type="radio"]:checked + .radio:before,
+input[type="radio"]:checked + .radio-after:after {
+	content: '\02713';
+	color: #3d96b6;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+
+/*
+ * Button Styles
+ */
+.button,
+.button:visited {
+	background-color: #999;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+	background-color: #adadad;
+}
+
+.button:disabled {
+	cursor: not-allowed;
+	opacity: 0.8;
+}
+
+/*
+* Button Sizes
+*/
+.button-sm {
+	font-size: 0.8em;
+}
+
+.button-md {
+	font-size: 1.2em;
+}
+
+.button-lg {
+	font-size: 1.4em;
+}
+
+/*
+ * Button Styles
+ */
+.button-primary {
+	background-color: #3d96b6;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+	background-color: #64abc5;
+}
+
+.button-info {
+	background-color: #070607;
+}
+
+.button-info:hover,
+.button-info:focus {
+	background-color: #393839;
+}
+
+.button-success {
+	background-color: #48a86f;
+}
+
+.button-success:hover,
+.button-success:focus {
+	background-color: #6db98c;
+}
+
+.button-warning {
+	background-color: #c59737;
+}
+
+.button-warning:hover
+.button-warning:focus {
+	background-color: #d1ac5f;
+}
+
+.button-danger {
+	background-color: #f44336;
+}
+
+.button-danger:hover,
+.button-danger:focus {
+	background-color: #f6695e;
+}
+
+
+/**
+ * Sign Up Form
+ */
+.sign-up-form input:not([type="submit"]) {
+	width: 100%;
+}
+
+.sign-up-form .button {
+	margin-top: 20px;
+}
+
+
+/**
+ * Search Form
+ */
+.search-form {
+	width: auto;
+}
+
+.search-form input[type="search"],
+select {
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+
+	.search-form input[type="search"],
+	select {
+		width: auto;
+	}
+
+	.search-form input ~ select,
+	.search-form input ~ .button {
+		margin-left: 20px;
+	}
+}
+
+
+/**
+ * Questionnaire
+ */
+.questionnaire-form fieldset {
+	border: 0;
+	padding: 0;
+}
+
+.questionnaire-form legend {
+	margin-bottom: 20px;
+}
+
+.questionnaire-form #other-type {
+	display: none;
+	margin-top: 10px;
+}
+
+#other:checked ~ #other-type {
+	display: block;
+}
+
+.questionnaire-form .button {
+	margin-top: 20px;
+}
+
+/**
+ * Login
+ */
+.login-form input[type="checkbox"] {
+	display: none;
+}
+
+
+/**
+ * Color Form
+ */
+.color-form {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 600px) {
+
+	.color-form {
+		justify-content: space-around;
+		width: 50%;
+	}
+}
+
+.color-result {
+	text-align: center;
+}
+
+.color-result span {
+	display: block;
+	margin-top: 15px;
+}
+
+.swatch {
+	border: 1px solid #333;
+	height: 75px;
+	margin: 0 auto;
+	width: 75px;
+}
+
+
+/**
+ * Shipping & Billing Form
+ */
+@media screen and (min-width: 600px) {
+
+	.address-form {
+		max-width: 100%;
+		width: auto;
+	}
+}
+
+label[for="no-match"] {
+	display: inline-block;
+}
+
+#no-match:checked ~ .billing-address {
+	display: block;
+}
+
+.billing-address {
+	clear: both;
+	display: none;
+	margin-top: 20px;
+}
+
+.address-form .radio-after {
+	float: left;
+}
+
+#no-match + .radio-after {
+	margin-left: 20px;
+}
+
+.address-form .form-footer {
+	clear: both;
+}
+
+.address-form .form-footer input[type="submit"] {
+	margin-top: 20px;
+}
+
+/**
+ * Credit card form
+ */
+.credit-card-form {
+	width: auto;
+}
+
+.credit-card-form li {
+	overflow: hidden;
+}
+
+.expiration > label {
+	margin-bottom: 10px;
+}
+
+.last-name,
+.code {
+	margin-top: 20px;
+}
+
+.month,
+.year {
+	float: left;
+	width: calc(50% - 10px);
+}
+
+.year {
+	margin-left: 20px;
+}
+
+.month select,
+.year select {
+	width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+
+	.first-name,
+	.last-name {
+		float: left;
+		width: calc(50% - 10px);
+	}
+
+	.card {
+		width: calc(80% - 20px);
+	}
+
+	.code {
+		width: 20%;
+	}
+
+	.card,
+	.code {
+		float: left;
+	}
+
+	.last-name,
+	.code {
+		margin-left: 20px;
+		margin-top: 0;
+	}
+}
+
+.sub-label {
+	font-size: 0.8em;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+

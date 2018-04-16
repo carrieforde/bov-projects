@@ -1,0 +1,38 @@
+//--------------------------------------------------------------
+// PHOTO ALBUM
+//--------------------------------------------------------------
+.photo-album {
+
+	// .photo-album__header
+	&__header {
+		// sass-lint:disable-block property-sort-order
+
+		@include media($tablet-portrait-up, null) {
+			grid-column-start: 1;
+			grid-column-end: 3;
+		}
+
+		@include media($tablet-landscape-up, null) {
+			grid-column-start: 1;
+			grid-column-end: 4;
+		}
+
+		@include media($desktop-up, null) {
+			grid-column-start: 1;
+			grid-column-end: 5;
+		}
+	}
+}
+
+.album-photo {
+	background-color: $color__light-gray;
+	max-width: 100%;
+	padding: $gutter__half;
+	text-align: center;
+	width: rem(170);
+
+	// .album-photo__caption
+	&__caption {
+		margin-top: $gutter__half;
+	}
+}

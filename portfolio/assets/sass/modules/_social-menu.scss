@@ -1,0 +1,37 @@
+//--------------------------------------------------------------
+// SOCIAL MENU
+//--------------------------------------------------------------
+.social-menu-wrapper {
+	margin-top: rem(40);
+
+	@include media(rem(775), null) {
+		float: right;
+		margin-left: rem(40);
+		margin-top: 0;
+		width: calc(33% - 40px);
+	}
+}
+
+.social-menu {
+	@include list-reset;
+
+	li {
+		margin-top: rem(10);
+	}
+
+	.fa {
+		margin-right: rem(10);
+	}
+
+	a {
+		color: color('white');
+		text-decoration: none;
+		transition: $transition__color;
+
+		&:hover,
+		&:active,
+		&:focus {
+			color: rgba(color('white'), 0.8);
+		}
+	}
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/sanitize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<title>Questionnaire</title>
+	</head>
+
+	<body class="questionnaire">
+		<main class="page">
+			<header class="page__header">
+				<h1>Questionnaire</h1>
+				<a href="index.html"><span class="arrow">&larr;</span>Back to Home</a>
+			</header>
+
+			<div class="page__content">
+				<form method="GET" action="" class="questionnaire-form" id="questionnaire-form">
+					<fieldset>
+						<legend>Choose your favorite cuisine</legend>
+						
+						<input type="radio" id="chinese" value="chinese" name="cuisine"><label for="chinese" class="radio">Chinese</label>
+						<input type="radio" id="italian" value="italian" name="cuisine"><label for="italian" class="radio">Italian</label>
+						<input type="radio" id="mexican" value="mexican" name="cuisine"><label for="mexican" class="radio">Mexican</label>
+						<input type="radio" id="thai" value="thai" name="cuisine"><label for="thai" class="radio">Thai</label>
+						<input type="radio" id="other" value="other" name="cuisine"><label for="other" class="radio">Other (please specify):</label>
+						<input type="text" id="other-type" placeholder="Other cuisine">
+					</fieldset>
+					<input type="submit" value="Submit" id="submit" class="button">
+				</form>
+			</div>
+		</main>
+		<script src="scripts/validator.js"></script>
+		<script src="scripts/utilities.js"></script>
+		<script src="scripts/questionnaire.js"></script>
+	</body>
+</html>

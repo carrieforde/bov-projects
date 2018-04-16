@@ -1,0 +1,28 @@
+//--------------------------------------------------------------
+// ARTICLE LIST
+//--------------------------------------------------------------
+.article-list {
+	@include list-reset;
+
+	li {
+		margin-left: 1em;
+
+		&:before {
+			color: color(razzmatazz);
+			content: '\f0da';
+			font-family: FontAwesome;
+			float: left;
+			margin-left: -1em;
+			margin-top: rem(2);
+		}
+	}
+
+	a {
+		color: color(mine-shaft);
+		text-decoration: none;
+
+		&:hover {
+			color: rgba(color(mine-shaft), 0.8);
+		}
+	}
+}

@@ -1,0 +1,120 @@
+//--------------------------------------------------------------
+// TYPOGRAPHY
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Classes from configuration file.
+//-----------------------------------------
+
+// .{font-family}
+@include typography($font-families, font-family);
+
+// .font-{size}
+@include typography($font-sizes, font-size, font);
+
+// .font-{weight}
+@include typography($font-weights, font-weight, font);
+
+// .lh-{size}
+@include typography($line-heights, line-height, lh);
+
+// .ls-{size}
+@include typography($letter-spacing, letter-spacing, ls);
+
+
+//-----------------------------------------
+// Other utilities
+//-----------------------------------------
+.text {
+
+	// &-left {
+	// 	text-align: center;
+	// }
+
+	&-center {
+		text-align: center;
+	}
+
+	// &-right {
+	// 	text-align: right;
+	// }
+
+	// &-justify {
+	// 	text-align: justify;
+	// }
+}
+
+// .whitespace {
+
+// 	&-normal {
+// 		white-space: normal
+// 	}
+
+// 	&-no-wrap {
+// 		white-space: nowrap;
+// 	}
+
+// 	&-pre {
+// 		white-space: pre;
+// 	}
+
+// 	&-pre-line {
+// 		white-space: pre-line;
+// 	}
+
+// 	&-pre-wrap {
+// 		white-space: pre-wrap;
+// 	}
+// }
+
+// .wordwrap {
+
+// 	&-break {
+// 		word-wrap: break-word;
+// 	}
+
+// 	&-normal {
+// 		word-wrap: normal;
+// 	}
+// }
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+// // .italic, .hover:italic
+// @include pseudo-states(font-style, italic);
+
+// // .normal, .hover:normal
+// @include pseudo-states(font-style, normal);
+
+// // .oblique, .hover:oblique
+// @include pseudo-states(font-style, oblique);
+
+// // .lowercase, .hover:lowercase
+// @include pseudo-states(text-transform, lowercase);
+
+// // .uppercase, .hover:uppercase
+// @include pseudo-states(text-transform, uppercase);
+
+// // .capitalize, .hover:capitalize
+// @include pseudo-states(text-transform, capitalize);
+
+// // .normal-case, .hover:normal-case
+// @include pseudo-states(text-transform, none, normal-case);
+
+// // .underline, .hover:underline
+// @include pseudo-states(text-decoration, underline);
+
+// // .no-underline, .hover:no-underline
+// @include pseudo-states(text-decoration, none, no-underline);
+
+// // .line-through, .hover:line-through
+// @include pseudo-states(text-decoration, line-through);

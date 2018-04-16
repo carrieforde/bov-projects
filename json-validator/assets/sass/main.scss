@@ -1,0 +1,72 @@
+//--------------------------------------------------------------
+// MAIN
+//
+// This is the mainifest for the project Sass.
+//--------------------------------------------------------------
+
+// Utilities
+@import 'config/index';
+
+// Elements
+@import 'elements/index';
+
+// Components
+@import 'modules/index';
+
+// General page styles (for now)
+.site-header {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu__item {
+	display: inline-block;
+}
+
+.menu__item + .menu__item {
+	margin-left: 20px;
+}
+
+.page {
+	padding: 20px;
+}
+
+.component {
+	padding: rem(40) rem(20) rem(60);
+
+	@include media($tablet-portrait-up, null) {
+		padding: rem(60) rem(20) rem(90);
+	}
+}
+
+#removeButton {
+	display: none;
+}
+
+.message-box {
+	font-size: 1.25em;
+	margin-bottom: 0;
+	padding: rem(10);
+}
+
+.valid {
+	background-color: rgba($color__success, 0.3);
+	border: 1px solid $color__success;
+}
+
+.invalid {
+	background-color: rgba($color__danger, 0.1);
+	border: 1px solid $color__danger;
+}

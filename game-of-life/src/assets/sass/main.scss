@@ -1,0 +1,131 @@
+// MAIN
+
+// Bourbon
+@import 'bourbon';
+
+// Config
+@import 'config';
+
+// Functions
+@import 'utilities/functions';
+
+// Mixins
+@import 'utilities/mixins/color';
+@import 'utilities/mixins/layout';
+@import 'utilities/mixins/utilities';
+@import 'utilities/mixins/media-queries';
+@import 'utilities/mixins/buttons';
+@import 'utilities/mixins/links';
+
+// Reset
+@import 'sanitize';
+
+body {
+	align-items: center;
+	background-color: $white-smoke;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	position: relative;
+
+	&::after {
+		@include position(absolute, 0 0 0 0);
+
+		background-color: rgba($black, 0.5);
+		content: '';
+		display: block;
+		transition: $transition-background-color;
+	}
+}
+
+.game-started {
+
+	&::after {
+		background-color: rgba($black, 0);
+		z-index: -2;
+	}
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+}
+
+canvas {
+	background-color: $white;
+	border: 1px solid $aluminum;
+	padding: 5px;
+}
+
+.gameSettings {
+	@include absolute-center;
+
+	align-items: center;
+	background-color: $white;
+	display: flex;
+	justify-content: center;
+	padding: rem(40);
+	text-align: center;
+	transition: visibility 0.3s ease-in-out, z-index 0.3s ease-in-out;
+	z-index: 3;
+
+	&.is-hidden {
+		visibility: hidden;
+		z-index: -1;
+	}
+}
+
+label {
+	display: block;
+	font-weight: 600;
+	margin-bottom: rem(5);
+}
+
+li {
+
+	+ li {
+		margin-top: rem(20);
+	}
+}
+
+input[type="number"] {
+	border: 1px solid $iron;
+	padding: 1em 1.5em;
+	text-align: center;
+}
+
+// Removes spinner from number inputs.
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	appearance: none;
+	margin: 0;
+}
+
+.list-reset {
+	@include list-reset;
+}
+
+.button {
+	@include button($color-primary, $background-hover: $color-secondary);
+
+	color: $white;
+	display: inline-block;
+	font-weight: 600;
+	padding: 1em 1.5em;
+	transition: $transition-background-color;
+
+	&:hover,
+	&:focus {
+		color: $white;
+	}
+}
+
+#endGame {
+	margin-top: rem(20);
+	opacity: 0;
+	transition: $transition-opacity;
+
+	&.is-visible {
+		opacity: 1;
+	}
+}

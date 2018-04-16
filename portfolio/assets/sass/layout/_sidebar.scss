@@ -1,0 +1,14 @@
+//--------------------------------------------------------------
+// SIDEBAR
+//--------------------------------------------------------------
+.sidebar {
+	top: auto;
+
+	&.is-fixed {
+		@include media($tablet-portrait-up, null) {
+			@include position(fixed, rem(155) null null calc(60% + 20px));
+
+			transition: $transition__top;
+		}
+	}
+}

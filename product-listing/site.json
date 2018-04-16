@@ -1,0 +1,43 @@
+{
+    "site-name": "Frey",
+    "logo": "frey-logo.svg",
+    "main_menu": [
+        "Home",
+        "Portfolio",
+        "Services",
+        "Blog",
+        "Shop"
+    ],
+    "about_menu": [
+        "Our company",
+        "Contact us",
+        "Our services",
+        "Careers",
+        "Our team"
+    ],
+   "address": "123 Main St.<br>San Francisco, CA 94105",
+   "email": "hello@freyshop.com",
+   "phone": "1-555-555-5555",
+   "social_networks": [
+       {
+           "name": "Facebook",
+           "url": "https://facebook.com",
+           "icon": "<i class=\"fa fa-facebook-square\" aria-hidden=\"true\"></i>"
+       },
+       {
+           "name": "Twitter",
+           "url": "https://twitter.com",
+           "icon": "<i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>"
+       },
+       {
+           "name": "Instagram",
+           "url": "https://instagram.com",
+           "icon": "<i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>"
+       }
+   ],
+   "footer_menu": [
+       "Our blog",
+       "Latest projects",
+       "Contact us"
+   ]
+}

@@ -1,0 +1,276 @@
+/// Add an [optional] project prefix (or namespace) to all CSS classes.
+///
+/// @type String
+///
+/// @example - scss Usage
+///  $project-prefix: cf;
+///
+/// @example - css Output
+///  .cf-text-primary {}
+///
+/// @example - markup Usage
+///  <h1 class="cf-text-primary"></h1>
+$project-prefix: ''; // if using, include a dash at the end.
+
+/// Top prefix used in box-model classes.
+$top: t;
+
+/// Right prefix used in box-model classes.
+$right: r;
+
+/// Bottom prefix used in box-model classes.
+$bottom: b;
+
+/// Left prefix used in box-model classes.
+$left: l;
+
+/// Horizontal (x-asis) prefix used in box-model classes.
+$horizontal: h;
+
+/// Vertical (y-axis) prefix used in box-model classes.
+$vertical: v;
+
+/// Prefixes for generating color classes. Leave properties on left, and only update values on right. If classes aren't needed, delete property value pair as needed.
+///
+/// @type Map 
+$color-prefixes: (
+	color: text,
+	background-color: bg
+);
+
+/// Define theme / site colors here. Colors are used to generate background, color, and fill classes.
+///
+/// @type Map
+$colors: (
+	midnight: #211925,
+	night-shadz: #c73861,
+	montana: #373D3C,
+	black: #0A0B0D,
+	marzipan: #EEC27E,
+	white: #fff,
+	midnight-sheer: rgba(#211925, 0.7),
+	boulder: #7b7e7d,
+	iron: #ddd,
+	white-03: rgba(#fff, 0.3),
+	mineral-green: #42634F
+);
+
+/// Define theme / site fonts here. Fonts are used to generate font-family classes.
+///
+/// @type Map
+///
+/// @example - css Sample Output
+///  .serif { Georgia, times, serif; }
+$font-families: (
+	contrail: #{'Contrail One', sans-serif;},
+	pt-sans: #{'PT Sans Narrow', sans-serif}
+);
+
+/// Define theme / site font sizes. Use any unit of measure desired.
+///
+/// @type Map
+///
+/// @example - css Sample Output
+///  .font-h1 { font-size: 2.25rem; }
+$font-sizes: (
+	giant: 4em,
+	big: 2em,
+	medium: 1.5em
+);
+
+/// Define font weights.
+///
+/// @type Map
+///
+/// @example - css Sample Output
+///  .font-bold { font-weight: 700; }
+$font-weights: (
+	normal: 400,
+	bold: 700
+);
+
+/// Define line height (leading).
+///
+/// @type Map
+///
+/// @example - css Sample Output
+///  .lh-none { line-height: 1; }
+$line-heights: (
+	none: 1,
+	std: 1.5
+);
+
+/// Define letter-spacing (tracking). Any unit of measure may be used, but `em`s are recommended for scalability.
+///
+/// @type Map
+///
+/// @example - css Sample Output
+///  .ls-wide { letter-spacing: 0.05em; }
+$letter-spacing: (
+	std: 0,
+	wide: 0.05em
+);
+
+//-----------------------------------------
+// Display
+//-----------------------------------------
+$display-prefixes: '';
+
+$flexbox-prefixes: (
+	align-content: ac,
+	align-items: ai,
+	align-self: as,
+	justify-content: jc
+);
+
+//-----------------------------------------
+// Border
+//-----------------------------------------
+$border-prefix: b;
+
+$border-sizes: (
+	thin: 1px,
+	thick: 5px
+);
+
+$border-radius: (
+	0: 0,
+	50: 50px
+);
+
+//-----------------------------------------
+// Margin
+//-----------------------------------------
+$margin-prefix: m;
+
+$margin-sizes: (
+	auto: auto,
+	0: 0
+);
+
+//-----------------------------------------
+// Padding
+//-----------------------------------------
+$padding-prefix: p;
+
+$padding-sizes: (
+	0: 0,
+	5: 0.3125rem,
+	7: 0.4375rem,
+	10: 0.625rem,
+	20: 1.25rem,
+	quarterem: 0.25em,
+	halfem: 0.5em,
+	em: 1em
+);
+
+//-----------------------------------------
+// Breakpoints
+//-----------------------------------------
+$breakpoint-prefix: ''; // should include a dash if using
+
+$breakpoints: ();
+
+//-----------------------------------------
+// Widths
+//-----------------------------------------
+$width-prefixes: (
+	max-width: max-w,
+	min-width: min-w,
+	width: w
+);
+
+$widths: (
+	0: 0,
+	content: 1100px,
+	full: 100%,
+	screen: 100vw,
+	pp: 110px // puzzle piece
+);
+
+//-----------------------------------------
+// Heights
+//-----------------------------------------
+$height-prefixes: (
+	height: h,
+	max-height: max-h,
+	min-height: min-h
+);
+
+$heights: (
+	0: 0,
+	full: 100%,
+	screen: 100vh,
+	pp: 95px // puzzle piece
+);
+
+//-----------------------------------------
+// Opacity
+//-----------------------------------------
+$opacity: (
+	0: 0,
+	1: 1
+);
+
+//-----------------------------------------
+// Positions
+//-----------------------------------------
+$position-prefix: pos;
+
+$puzzle-cols: (
+	col1: 57px,
+	col2: 141px,
+	col3: 225px,
+	col4: 309px,
+	col5: 393px,
+	col6: 477px,
+	col7: 560px,
+	col8: 644px,
+	col9: 728px
+);
+
+$puzzle-rows: (
+	row1: 65px,
+	row2: 114px,
+	row3: 161px,
+	row4: 211px,
+	row5: 258px,
+	row6: 307px,
+	row7: 355px,
+	row8: 404px,
+	row9: 453px,
+);
+
+$positions: (
+	0: 0
+);
+
+//-----------------------------------------
+// Z-Index
+//-----------------------------------------
+$z-indeces: (
+	-1: -1,
+	1: 1,
+	30: 30,
+	31: 31,
+	32: 32
+);
+
+//-----------------------------------------
+// Transitions
+//-----------------------------------------
+$transition-prefix: trs;
+
+$transition-duration: 0.3s;
+
+$transition-timing: ease-in-out;
+
+$transition-properties: (
+	background-color: bgc,
+	color: c,
+	font-weight: fw,
+	opacity: o,
+	transform: tf,
+	visibility: v,
+	z-index: z
+);

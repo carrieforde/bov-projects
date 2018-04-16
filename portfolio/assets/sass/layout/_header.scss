@@ -1,0 +1,33 @@
+//--------------------------------------------------------------
+// SITE HEADER
+//--------------------------------------------------------------
+.site-header {
+	align-items: center;
+	box-shadow: 1px 1px 6px 0 rgba(color(mine-shaft), 0.15);
+	display: flex;
+	padding: 20px;
+
+	@include media($desktop-up, null) {
+		background-color: rgba(color('white'), 0.9);
+		justify-content: space-between;
+		top: 0;
+		width: 100%;
+		z-index: 3;
+
+		.cookieDismissed & {
+			position: fixed;
+		}
+	}
+
+	.icon {
+		max-height: rem(75);
+		max-width: 100%;
+		width: auto;
+	}
+}
+
+.site-title {
+	flex-basis: 250px;
+	flex-shrink: 3;
+	margin-bottom: 0;
+}

@@ -1,0 +1,37 @@
+// ----------------------------------------------------------------------------
+// WIDGET
+// ----------------------------------------------------------------------------
+.widget {
+
+	@include media(null, $tablet-portrait-up) {
+		margin-top: $gutter * 2;
+	}
+
+	// .widget__title
+	&__title {
+		font-size: em(16);
+		margin-bottom: 0;
+	}
+
+	address {
+		font-style: normal;
+		margin-top: rem(6);
+	}
+
+	p {
+		margin: rem(3) 0 0;
+	}
+
+	a {
+		border: 0;
+		color: $font__body-color;
+
+		&:hover {
+			color: $color__primary;
+		}
+	}
+
+	.fa {
+		margin-right: rem(12);
+	}
+}

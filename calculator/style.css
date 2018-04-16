@@ -1,0 +1,93 @@
+/**
+ * Styles
+ */
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.page__content {
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	width: 100vw;
+}
+
+.calculator {
+	background-color: rgba(7, 105, 200, 0.7);
+	border-radius: 5px;
+	box-shadow: 2px 3px 5px 0 rgba(0, 0, 0, 0.3);
+	display: grid;
+	grid-gap: 15px;
+	grid-template: repeat(5, 20%) / repeat(4, 1fr);
+	padding: 20px;
+}
+
+.result {
+	border: 0;
+	border-radius: 5px;
+	box-shadow: inset 0 4px 2px rgba(0, 0, 0, 0.2);
+	font-size: 1em;
+	grid-column: 3 / 5;
+	padding: 0 1em;
+	text-align: right;
+}
+
+.button {
+	background-color: #fafafa;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: 0 4px 0 0 #83b4e3;
+	display: inline-block;
+	font-size: 1.5em;
+	outline: 0;
+	padding: 0.5em 1em;
+	text-align: center;
+	transition: transform, box-shadow 0.2s ease-in-out;
+}
+
+.button:active {
+	box-shadow: 0 2.5px 0 0 #83b4e3,
+				inset 0 0 8px #83b4e3;
+	transform: translate(0.5px, 1px);
+}
+
+.button-clear {
+	background-color: #ff746a;
+	box-shadow: 0 4px 0 0 #803a35;
+	color: #fff;
+}
+
+.button-clear:active {
+	box-shadow: 0 2.5px 0 0 #803a35,
+				inset 0 0 8px #803a35;
+}
+
+.button-operator,
+.button-delete {
+	background-color: #ffed8f;
+	box-shadow: 0 4px 0 0 #807748;
+}
+
+.button-operator:active,
+.button-delete:active {
+	box-shadow: 0 2.5px 0 0 #807748,
+				inset 0 0 8px #807748;
+}
+
+.button-equals {
+	background-color: #91e788;
+	box-shadow: 0 4px 0 0 #497444;
+}
+
+.button-equals:active {
+	box-shadow: 0 2.5px 0 0 #497444,
+				inset 0 0 8px #497444;
+}

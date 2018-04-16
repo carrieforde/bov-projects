@@ -1,0 +1,29 @@
+//--------------------------------------------------------------
+// COLORS
+//--------------------------------------------------------------
+
+
+/// Set up color classes quickly by looping through a color Sass map.
+///
+/// @author Carrie Forde
+///
+/// @param {map} $colors [$colors] - The map of colors to loop through.
+
+
+@mixin colors($color-map) {
+
+	@each $name, $color in $color-map {
+
+		.bg--#{$name} {
+			background-color: $color;
+		}
+
+		.text--#{$name} {
+			color: $color;
+		}
+
+		.fill--#{$name} {
+			fill: $color;
+		}
+	}
+}

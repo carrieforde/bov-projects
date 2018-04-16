@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Link Harvester</title>
+	<link href="https://fonts.googleapis.com/css?family=Fira+Mono|Fira+Sans+Extra+Condensed:400,400i,700,700i|Fira+Sans:800"
+	 rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="dist/style.min.css?version=0.1.1">
+</head>
+<body>
+	<header class="site-header">
+		<h1>Link Harvester</h1>
+	</header>
+	<main class="page">
+		<div class="page__content">
+			<section class="module">
+				<header class="module__header">
+					<h2>Harvest Links</h2>
+					<p class="intro">Upload an HTML file, or paste your HTML into the text area below to get started.</p>
+				</header>
+				<div class="module__content">
+					<form action="" method="get" name="link-harvester-form" id="link-harvester-form">
+						<ul>
+							<li>
+								<input type="file" id="html-file" accept=".html" class="screen-reader-text">
+								<label for="html-file" class="button button--info button--icon"><i class="fa fa-upload" aria-hidden="true"></i> Upload an HTML file</label>
+								<button class="button button--danger is-hidden" id="removeButton" type="button">Remove</button>
+							</li>
+							<li>
+								<label for="html-text">Paste HTML text</label>
+								<textarea name="html-text" id="html-text" class="html-text" cols="30" rows="10"></textarea>
+							</li>
+							<li>
+								<input type="submit" id="submit" value="Submit" class="button button--primary">
+							</li>
+						</ul>
+					</form>
+				</div>
+			</section>
+			
+			<section id="results" class="module is-hidden">
+				<header class="module__header">
+					<h2>Harvested Links:</h2>
+				</header>
+				<div class="module__content"></div>
+			</section>
+		</div>
+	</main>
+	<script src="dist/app.min.js?version=0.1.1"></script>
+</body>
+</html>

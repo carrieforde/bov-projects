@@ -1,0 +1,158 @@
+//--------------------------------------------------------------
+// FORMS
+//--------------------------------------------------------------
+
+// Form structure
+form {
+
+	ul {
+		@include list-reset;
+	}
+
+	li {
+		clear: both;
+		margin-bottom: rem(20);
+	}
+}
+
+// Labels
+label {
+	display: block;
+	font-weight: 600;
+
+	.contact-form {
+		text-align: left;
+	}
+}
+
+// Field inputs.
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+	border: $border__forms;
+	border-radius: $border__radius;
+	color: $color__forms-text;
+	outline: 0;
+	padding: rem(5);
+	width: 100%;
+
+	&:focus {
+		border: $border__forms-focus;
+	}
+}
+
+
+//-----------------------------------------
+// Search Form
+//-----------------------------------------
+.search-form {
+	display: flex;
+	margin-left: rem(10);
+	margin-top: 20px;
+	position: relative;
+
+	@include media($tablet-landscape-up, null) {
+		margin-left: rem(40);
+		margin-top: 0;
+	}
+
+	label {
+		@include position(absolute, 0 null 0 null);
+
+		font-size: em(16);
+		font-weight: 400;
+		line-height: 31px;
+		text-transform: none;
+		transition: $transition__font-size, $transition__top;
+		z-index: -1; // allows for javascript focus
+	}
+
+	&.is-focused {
+
+		label {
+			font-size: em(13);
+			top: 100%;
+
+			@include media($tablet-landscape-up, null) {
+				top: -25px;
+			}
+		}
+	}
+}
+
+#search {
+	border-bottom-width: rem(2);
+	border-left: 0;
+	border-radius: 0;
+	border-right: 0;
+	border-top: 0;
+	outline: 0;
+	padding: 0;
+	transition: $transition__border-color;
+
+	&:focus {
+		border-bottom-color: color(razzmatazz);
+	}
+
+	// #search-submit
+	&-submit {
+		background-image: url(../assets/icons/svg/search-dark-gray.svg);
+		padding: rem(2) rem(6) rem(3);
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-image: url(../assets/icons/svg/search-razzmatazz.svg);
+		}
+	}
+}
+
+
+//-----------------------------------------
+// Contact Form
+//-----------------------------------------
+.contact-form-wrapper {
+	
+	@include media(rem(775), null) {
+		float: left;
+		width: 66%;
+	}
+}
+
+.contact-form {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="url"],
+	input[type="password"],
+	input[type="search"],
+	textarea {
+		background-color: rgba(color('white'), 0.8);
+		border-color: color('white');
+	}
+
+	@include media($tablet-landscape-up, null) {
+		
+		li {
+
+			&:first-of-type,
+			&:nth-of-type(2) {
+				clear: none;
+				float: left;
+				overflow: hidden;
+				width: calc(50% - 15px);
+			}
+
+			&:nth-of-type(2) {
+				float: right;
+			}
+		}
+	}
+
+	label {
+		text-align: left;
+	}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/sanitize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<title>Forms & Inputs</title>
+	</head>
+
+	<body class="sign-up">
+		<main class="page">
+			<header class="page__header">
+				<h1>Sign Up</h1>
+				<a href="index.html"><span class="arrow">&larr;</span>Back to Home</a>
+			</header>
+
+			<div class="page__content">
+				<form method="GET" action="" class="sign-up-form" id="sign-up">
+					<ul>
+						<li>
+							<label for="first-name">First Name</label>
+							<input type="text" id="first-name" placeholder="First Name">
+						</li>
+						<li>
+							<label for="last-name">Last Name</label>
+							<input type="text" id="last-name" placeholder="Last Name">
+						</li>
+						<li>
+							<label for="email">Email Address</label>
+							<input type="email" id="email" placeholder="your@email.com">
+						</li>
+						<li>
+							<input type="submit" id="submit" class="button button-primary" value="Sign Up">
+						</li>
+					</ul>
+				</form>
+			</div>
+		</main>
+		<script src="scripts/validator.js"></script>
+		<script src="scripts/utilities.js"></script>
+		<script src="scripts/signup.js"></script>
+	</body>
+</html>

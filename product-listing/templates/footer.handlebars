@@ -1,0 +1,51 @@
+<footer id="siteFooter" class="site-footer">
+	<div>
+		<svg class="logo">
+			<use xlink:href="assets/icons/svg-defs.svg#frey-logo">
+		</svg>
+	</div>
+
+	<div class="widgets">
+		<div class="widget">
+			<h3 class="widget__title">About us</h3>
+			<ul class="nav-menu list-reset">
+				{{#each about_menu}}
+				<li id="{{camelCase this}}">
+					<a href="#{{camelCase this}}" class="text--aluminum">{{this}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+
+		<div class="widget">
+			<h3 class="widget__title">Connect</h3>
+			<div class="widget__content">
+				<address>{{{address}}}</address>
+				<p><a href="mailto:{{email}}">{{email}}</a></p>
+				<p><a href="tel:{{phone}}">{{phone}}</a></p>
+			</div>
+		</div>
+
+		<div class="widget">
+			<h3 class="widget__title">Follow us</h3>
+			<ul class="nav-menu list-reset">
+				{{#each social_networks}}
+				<li id="{{camelCase name}}">
+					<a href="#{{url}}" class="text--black">{{{icon}}}{{name}}</a>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+	<div class="footer-bottom flex align-center justify-between">
+		<ul class="nav-menu flex list-reset">
+			{{#each footer_menu}}
+			<li id="{{camelCase this}}">
+				<a href="#{{camelCase this}}">{{this}}</a>
+			</li>
+			{{/each}}
+		</ul>
+		<p>&copy; 2017 Frey Theme. All rights reserved.</p>
+	</div>
+</footer>

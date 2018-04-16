@@ -1,0 +1,55 @@
+// ----------------------------------------------------------------------------
+// FOOTER
+// ----------------------------------------------------------------------------
+.site-footer {
+	border-top: 1px solid $color__athens-gray;
+	padding: $gutter;
+
+	@include media(null, $tablet-landscape-up) {
+		text-align: center;
+	}
+
+	@include media($tablet-landscape-up, null) {
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+	}
+
+	@include media($desktop-up, null) {
+		padding: rem(50);
+	}
+
+	@include media($desktop-xl-up, null) {
+		padding: rem(100);
+	}
+
+	.widgets {
+		
+		@include media($tablet-portrait-up, null) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: $gutter * 2;
+		}
+
+		@include media($tablet-portrait-up, $tablet-landscape-up) {
+			margin-top: rem(50);
+		}
+	}
+}
+
+.footer-bottom {
+	font-size: em(13);
+	margin-top: rem(50);
+
+	p {
+		margin: 0;
+	}
+
+	@include media(null, $tablet-portrait-up) {
+		flex-direction: column;
+	}
+
+	@include media($tablet-landscape-up, null) {
+		grid-column-end: 3;
+		grid-column-start: 1;
+	}
+}

@@ -1,0 +1,26 @@
+<header id="site-header" class="site-header flex align-center justify-between">
+	<div id="site-info" class="site-info">
+		<svg class="logo">
+			<use xlink:href="assets/icons/svg-defs.svg#frey-logo">
+		</svg>
+		<p class="hide-text">Frey</p>
+	</div>
+	<button id="mobileMenu" class="button button--light button--hamburger">
+		<span class="hide-text">Menu</span>
+		<span class="burger burger--top-bun"></span>
+		<span class="burger burger--patty"></span>
+		<span class="burger burger--bottom-bun"></span>
+	</button>
+	<nav id="primary-nav" class="primary-nav poppins">
+		<ul class="flex nav-menu">
+			{{#each this.main_menu}}
+				<li id="{{camelCase this}}" class="poppins"><a href="#{{camelCase this}}" class="text--black">{{this}}</a></li>
+			{{/each}}
+		</ul>
+	</nav>
+	<button type="button" class="button button--light button--cart" onclick="openModal('modal')">
+		<span class="hide-text">Cart</span>
+		<i class="fa fa-shopping-bag text--black" aria-hidden="true"></i>
+		<span id="cartCount" class="cart-count"></span>
+	</button>
+</header>

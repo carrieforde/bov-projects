@@ -1,0 +1,15 @@
+{{#with this.[0]}}
+<section id="{{id}}" class="module module--{{id}}">
+    <div class="row">
+        <header class="module__header">
+            <h2>{{title}}</h2>
+        </header>
+
+        <div class="module__content">
+            <img class="alignright" src="{{img}}" alt="{{imgAlt}}">
+            <p class="intro text-left">{{contentIntro}}</p>
+            {{{contentMain}}}
+        </div>
+    </div>
+</section>
+{{/with}}

@@ -1,0 +1,26 @@
+{
+  "name": "bov-photo-album",
+  "description": "A photo album project using Handlebars",
+  "main": "app.js",
+  "authors": [
+    "Carrie Forde"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "handlebars"
+  ],
+  "homepage": "https://github.com/carrieforde/Bov-Photo-Album",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "^4.0.11",
+    "zepto": "^1.2.0"
+  }
+}

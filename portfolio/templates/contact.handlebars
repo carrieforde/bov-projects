@@ -1,0 +1,45 @@
+{{#with this.[4]}}
+<section id="{{id}}" class="module module--{{id}} background--razzmatazz color--white">
+	<div class="row">
+		<header class="module__header">
+			<h2>{{title}}</h2>
+		</header>
+
+		<div class="module__content">
+			<p class="intro text-center">{{contentIntro}}</p>
+
+			<div class="contact-form-wrapper">
+				<form method="GET" action="" name="contact" id="contact-form" class="contact-form">
+					<h3 class="color--white">Send a message!</h3>
+					<ul>
+						{{#each formFields}}
+						<li>
+							<label for="{{camelCase label}}">{{label}}</label>
+							<input type="{{type}}" id="{{camelCase label}}" name="{{camelCase label}}">
+						</li>
+						{{/each}}
+						<li>
+							<label>Message</label>
+							<textarea></textarea>
+						</li>
+						<li>
+							<input type="submit" id="submit" name="submit" class="button button--outline" value="Submit">
+						</li>
+					</ul>
+				</form>
+			</div>
+
+			<div class="social-menu-wrapper">
+				<h3 class="color--white">Connect on social media</h3>
+				<ul class="social-menu">
+					{{#each socialNetworks}}
+					<li>
+						<a href="{{url}}">{{{icon}}}{{name}}</a>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+{{/with}}

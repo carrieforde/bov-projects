@@ -1,0 +1,49 @@
+{{#with this.[3]}}
+<section id="{{id}}" class="module module--{{id}} background--white-smoke">
+	<header class="module__header">
+		<h2>{{title}}</h2>
+	</header>
+	<div class="module__content">
+		<p class="intro text-center">{{contentIntro}}</p>
+
+		{{#with articles}}
+		{{#each this}}
+			<article class="card card--post background--white" data-title="{{title}}" data-content="{{content}}">
+				<div class="card__inner-wrap">
+					<div class="card__image">
+						<a href="#post-{{id}}" class="article-link">
+							{{#if image}}
+							<img src="{{image}}" alt="">
+							{{else}}
+							<img src="https://picsum.photos/500/300?image=668" alt="">
+							{{/if}}
+						</a>
+						<span class="category-badge background--razzmatazz color--white">
+							{{category}}
+						</span>
+					</div>
+			
+					<header class="card__header">
+						<h2 class="card__title">
+							<a href="#post-{{id}}" class="article-link">
+								{{{title}}}
+							</a>
+						</h2>
+					</header>
+			
+					<div class="entry-content card__content">
+						{{excerpt content}}
+					</div>
+			
+					<footer class="entry-footer card__footer">
+						<a href="#post-{{id}}" class="link">
+							Read More
+						</a>
+					</footer>
+				</div>
+			</article>
+		{{/each}}
+		{{/with}}
+	</div>
+</section>
+{{/with}}

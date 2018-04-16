@@ -1,0 +1,27 @@
+//--------------------------------------------------------------
+// GRID
+//--------------------------------------------------------------
+.grid {
+
+	@include media($tablet-portrait-up, null) {
+		display: grid;
+		grid-gap: $gutter;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include media($tablet-landscape-up, null) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@include media($desktop-up, null) {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	+ .grid {
+		margin-top: $gutter__double;
+
+		@include media($tablet-landscape-up, null) {
+			margin-top: $gutter * 3;
+		}
+	}
+}

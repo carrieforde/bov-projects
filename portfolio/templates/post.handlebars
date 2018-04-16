@@ -1,0 +1,28 @@
+<section id="post" class="module module--post is-hidden">
+	<button id="homeButton" class="link link--left">Return Home</button>
+	{{#with this.[3]}}
+	<article id="post-{{id}}" class="post">
+
+		<header class="post__header">
+			<h1 class="post__title">{{{title}}}</h1>
+		</header>
+
+		<div class="post__content">
+			{{content}}
+		</div>
+	</article>
+
+	<aside class="sidebar">
+		<div class="widget">
+			<h3 class="widget__title">All Articles</h3>
+			<ul class="article-list">
+				{{#with articles}}
+				{{#each this}}
+					<li data-title="{{title}}" data-content="{{content}}"><a class="read-post" href="#{{id}}">{{{title}}}</a></li>
+				{{/each}}
+				{{/with}}
+			</ul>
+		</div>
+	</aside>
+	{{/with}}
+</section>

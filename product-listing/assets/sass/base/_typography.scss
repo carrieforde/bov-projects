@@ -1,0 +1,67 @@
+// ----------------------------------------------------------------------------
+// TYPOGRAPHY
+// ----------------------------------------------------------------------------
+html {
+	font-size: $root-font-size + px;
+}
+
+body {
+	color: $font__body-color;
+	font: $font__body-weight #{$font__body-size}px/#{$font__body-line-height} $font__body;
+}
+
+
+//-----------------------------------------------
+// Headings
+//-----------------------------------------------
+@for $i from 1 through 6 {
+	
+	h#{$i},
+	.h#{$i} {
+		color: $font__headings-color;
+		font-family: $font__headings;
+		font-weight: $font__headings-weight;
+		margin: 0 0 0.5em;
+	}
+}
+
+h1,
+.h1 {
+	font-size: $font__h1;
+}
+
+h2,
+.h2 {
+	font-size: $font__h2;
+}
+
+h3,
+.h3 {
+	font-size: $font__h3;
+}
+
+h4,
+.h4 {
+	font-size: $font__h4;
+}
+
+h5,
+.h5 {
+	font-size: $font__h5;
+}
+
+h6,
+.h6 {
+	font-size: $font__h6;
+}
+
+a {
+	border-bottom: 1px solid $color__primary;
+	text-decoration: none;
+	transition: $transition__color;
+
+	&:hover,
+	&:focus {
+		color: $color__primary;
+	}
+}

@@ -1,0 +1,86 @@
+// CONFIG
+
+/// Set the base (`root`) font size for the project.
+///
+/// @type Number
+$base-font-size: 16 !default;
+
+/// Set the base line height for the project. This value should represent the pixel equivalent.
+///
+/// @type Number
+$base-line-height: 24 !default;
+
+/// Set a base border radius that will be used for various UI elements within the project.
+///
+/// @type Number
+$base-radius: 4px;
+
+
+// Colors
+$purple-heart: #5B1DDA;
+$fashion-fushsia: #E008AA;
+$alabaster: #FAF9FB;
+$martinique: #3B3A4E;
+$white: #fff;
+$black: #222227;
+
+$color-primary: $purple-heart !default;
+$color-accent: $fashion-fushsia !default;
+$color-light-gray: $alabaster !default;
+$color-dark-gray: $martinique !default;
+$color-white: $white !default;
+$color-black: $black !default;
+
+$background-gradient: linear-gradient(to right bottom, $color-primary, rgba($color-accent, 0.7) 95%);
+
+$album-shadow: 7px 7px 4px 0 rgba($color-light-gray, 0.7);
+
+/// The main colors used throughout the site.
+///
+/// @type Map
+$theme-colors: (
+	'primary': $color-primary,
+	'accent': $color-accent,
+	'light-gray': $color-light-gray,
+	'dark-gray': $color-dark-gray,
+	'white': $color-white,
+	'black': $color-black
+);
+
+/// Default dark text color.
+///
+/// @type Color
+/// @todo Rename & update where used
+$text-default-dark: $color-black;
+
+/// Default light text color.
+///
+/// @type Color
+/// @todo Rename & update where used
+$text-default-light: $color-white;
+
+
+/// Font
+///
+/// @type String
+$font-body: 'Work Sans', sans-serif;
+
+
+/// Breakpoints - add more as needed.
+///
+/// @type Number
+/// @link https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862#.or3duno2h
+$tablet-portrait: 600px;
+$tablet-landscape: 900px;
+$desktop: 1200px;
+$desktop-xl: 1800px;
+
+$gutter: 20px;
+
+
+// Transitions
+$transition-opacity: opacity 0.3s ease-in-out;
+$transition-left: left 0.3s ease-in-out;
+$transition-color: color 0.3s ease-in-out;
+$transition-z-index: z-index 0.3s ease-in-out 0.5s;
+$transition-box-shadow: box-shadow 0.3s ease-in-out;

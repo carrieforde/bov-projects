@@ -1,0 +1,21 @@
+//--------------------------------------------------------------
+// TYPOGRAPHY
+//--------------------------------------------------------------
+
+
+//-----------------------------------------
+// Font Palette
+//-----------------------------------------
+$fira-sans: 'Fira Sans', sans-serif;
+$skolar-sans: 'skolar-sans-latin', sans-serif;
+
+
+//-----------------------------------------
+// Typography Config
+//-----------------------------------------
+$font__body: $skolar-sans;
+$font__body-line-height: 1.6;
+$font__body-weight: 400;
+$font__body-size: $base-context * 1px;
+$font__headings: $fira-sans;
+

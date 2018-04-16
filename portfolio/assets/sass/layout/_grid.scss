@@ -1,0 +1,17 @@
+//--------------------------------------------------------------
+// GRID
+//--------------------------------------------------------------
+
+.row {
+	margin: 0 auto;
+	max-width: 100%;
+	width: rem(960);
+}
+
+.page__content {
+	
+	@include media($tablet-landscape-up, null) {
+		margin-top: rem(115);
+	}
+}
+

@@ -1,0 +1,83 @@
+// CONFIG
+
+/// Set the base (`root`) font size for the project.
+///
+/// @type Number
+$base-font-size: 16 !default;
+
+/// Set the base line height for the project. This value should represent the pixel equivalent.
+///
+/// @type Number
+$base-line-height: 24 !default;
+
+/// Set a base border radius that will be used for various UI elements within the project.
+///
+/// @type Number
+$base-radius: 4px;
+
+
+// Colors
+$palantinate-blue: #0e3cda;
+$blue-de-france: #458DFE;
+$pastel-orange: #feb645;
+$mojo: #c64536;
+$norway: #9ebe83;
+$black: #222;
+$aluminum: #999;
+$iron: #ccc;
+$gainsboro: #ddd;
+$athens-gray: #eee;
+$white-smoke: #f5f5f5;
+$alabaster: #fbfbfb;
+$white: #fff;
+
+$color-primary: $palantinate-blue !default;
+$color-secondary: $blue-de-france !default;
+$color-accent: $pastel-orange !default;
+$color-success: $norway !default;
+$color-danger: $mojo !default;
+$color-light-gray: $white-smoke !default;
+$color-dark-gray: $aluminum !default;
+
+/// The main colors used throughout the site.
+///
+/// @type Map
+$theme-colors: (
+	'primary': $color-primary,
+	'secondary': $color-secondary,
+	'accent': $color-accent,
+	'success': $color-success,
+	'danger': $color-danger,
+	'light-gray': $color-light-gray,
+	'dark-gray': $color-dark-gray
+);
+
+/// Default dark text color.
+///
+/// @type Color
+/// @todo Rename & update where used
+$text-default-dark: #000;
+
+/// Default light text color.
+///
+/// @type Color
+/// @todo Rename & update where used
+$text-default-light: #fff;
+
+
+/// Breakpoints - add more as needed.
+///
+/// @type Number
+/// @link https://medium.freecodecamp.com/the-100-correct-way-to-do-css-breakpoints-88d6a5ba1862#.or3duno2h
+$tablet-portrait: 600px;
+$tablet-landscape: 900px;
+$desktop: 1200px;
+$desktop-xl: 1800px;
+
+
+// TRANSITIONS
+$timing: 0.3s ease-in-out;
+
+$transition-background-color: background-color $timing;
+$transition-opacity: opacity $timing;
+$transition-z-index: z-index $timing;

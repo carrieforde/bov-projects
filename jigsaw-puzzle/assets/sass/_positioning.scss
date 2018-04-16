@@ -1,0 +1,61 @@
+//--------------------------------------------------------------
+// POSITIONING
+//--------------------------------------------------------------
+.relative {
+	position: relative;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.static {
+	position: static;
+}
+
+.sticky {
+	position: sticky;
+}
+
+@each $key, $value in $positions {
+
+	.#{$position-prefix}-#{$top}-#{$key} {
+		top: $value;
+	}
+
+	.#{$position-prefix}-#{$right}-#{$key} {
+		right: $value;
+	}
+
+	.#{$position-prefix}-#{$bottom}-#{$key} {
+		bottom: $value;
+	}
+
+	.#{$position-prefix}-#{$left}-#{$key} {
+		left: $value;
+	}
+}
+
+.pos-h-center {
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.pos-v-center {
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+//-----------------------------------------
+// Z-Index
+//-----------------------------------------
+@each $key, $value in $z-indeces {
+	
+	.z-#{$key} {
+		z-index: $value;
+	}
+}

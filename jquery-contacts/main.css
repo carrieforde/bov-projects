@@ -1,0 +1,104 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.page {
+	padding: 20px;
+}
+
+.user {
+	border: 1px solid #999;
+	padding: 20px;
+}
+
+.user + .user {
+	margin-top: 20px;
+}
+
+.user h2 {
+	font-size: 1.25em;
+	margin: 0 0 0.25em;
+}
+
+.selected {
+	border-color: #feb645;
+}
+
+.selected h2 {
+	font-style: italic;
+}
+
+a,
+a:visited {
+	color: #0e3cda;
+	display: block;
+	pointer-events: none; /* because this is for illustrative purposes, let's not follow links. */
+	transition: color 0.3s ease-in-out;
+}
+
+a:hover,
+a:focus {
+	color: #458DFE;
+}
+
+.user-details {
+	margin-top: 40px;
+	padding: 20px;
+}
+
+.user-details.has-data {
+	border: 1px solid #999;
+}
+
+.user-details h2 {
+	margin-top: 0;
+}
+
+.user-details a {
+	margin-bottom: 10px;
+}
+
+address {
+	margin: 10px 0;
+}
+
+.clear-selection {
+	background-color: #0e3cda;
+	border: 0;
+	color: #fff;
+	display: block;
+	margin-top: 20px;
+	padding: 1em 2em;
+	transition: background-color 0.3s ease-in-out;
+	width: 100%;
+}
+
+.clear-selection:hover {
+	background-color: #458DFE;
+}
+
+@media screen and (min-width: 600px) {
+	.page {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(2, 50%);
+	}
+
+	.user-details {
+		margin-right: 20px;
+		margin-top: 0;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	.users {
+		display: grid;
+		grid-gap: 20px;
+		grid-template-columns: repeat(2, calc(50% - 10px));
+	}
+
+	.user + .user {
+		margin-top: 0;
+	}
+}

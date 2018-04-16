@@ -1,0 +1,64 @@
+//--------------------------------------------------------------
+// TYPOGRAPHY
+//--------------------------------------------------------------
+html {
+	font-size: $base-context * 1px;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__body-text;
+	font-family: $font__body;
+	line-height: $font__body-line-height;
+}
+
+
+//-----------------------------------------
+// Headings
+//-----------------------------------------
+#{headings(1, 6)} {
+	color: $color__headings;
+	font-family: $font__headings;
+	font-weight: 800;
+	margin: 0 0 0.5em;
+}
+
+
+//-----------------------------------------
+// Inline Elements
+//-----------------------------------------
+p {
+	margin: 0 0 1.5em;
+}
+
+a {
+	transition: $transition__color;
+}
+
+
+//-----------------------------------------
+// Utilities
+//-----------------------------------------
+.intro {
+	font-size: 1.25em;
+	font-weight: 600;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.screen-reader-text {
+	@include hide-text;
+}
+
+.alignright {
+	@include media($tablet-portrait-up, null) {
+		display: block;
+		float: right;
+		margin-left: rem(20);
+	}
+}

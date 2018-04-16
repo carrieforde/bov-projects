@@ -1,0 +1,43 @@
+{{#with this.[2]}}
+<section id="{{id}}" class="module module--{{id}}">
+	<div class="row">
+		<header class="module__header">
+			<h2>{{title}}</h2>
+		</header>
+
+		<div class="module__content">
+			<p class="intro text-center">{{contentIntro}}</p>
+
+			{{#each charts}}
+			{{#matches type 'horizontal'}}
+			<div class="chart chart--horizontal">
+				{{#each skills}}
+				<span class="bar--{{hyphenCase skill}}" data-level="{{level}}">{{level}}%</span>
+				{{/each}}
+			</div>
+			{{/matches}} {{#matches type 'vertical'}}
+			<div class="chart-wrapper chart--{{hyphenCase name}}">
+				<h3 class="chart__header">{{name}}</h3>
+				<ul class="legend">
+					<li>Learning</li>
+					<li>Competent</li>
+					<li>Proficient</li>
+					<li>Expert</li>
+				</ul>
+				<ul class="chart chart--vertical">
+					{{#each skills}}
+					<li class="chart__data-point">
+						<span class="bar" data-level="{{level}}">
+							<span class="tooltip">{{tooltip}}</span>
+						</span>
+						<span class="chart__label">{{skill}}</span>
+					</li>
+					{{/each}}
+				</ul>
+			</div>
+			{{/matches}}
+			{{/each}}
+		</div>
+	</div>
+</section>
+{{/with}}

@@ -1,0 +1,77 @@
+//--------------------------------------------------------------
+// BORDERS
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Border Sizes
+//-----------------------------------------
+@each $key, $value in $border-sizes {
+
+	// .#{$border-prefix}-{size}
+	.#{$border-prefix}-#{$key} {
+		border: $value solid;
+	}
+
+	// .#{$border-prefix}-#{$vertical}-#{$key} {
+	// 	border-bottom: $value solid;
+	// 	border-top: $value solid;
+	// }
+
+	// .#{$border-prefix}-#{$horizontal}-#{$key} {
+	// 	border-left: $value solid;
+	// 	border-right: $value solid;
+	// }
+
+	// .#{$border-prefix}-#{$top}-#{$key} {
+	// 	border-top: $value solid;
+	// }
+
+	// .#{$border-prefix}-#{$right}-#{$key} {
+	// 	border-right: $value solid;
+	// }
+
+	// .#{$border-prefix}-#{$bottom}-#{$key} {
+	// 	border-bottom: $value solid;
+	// }
+
+	// .#{$border-prefix}-#{$left}-#{$key} {
+	// 	border-left: $value solid;
+	// }
+}
+
+//-----------------------------------------
+// Border Styles
+//-----------------------------------------
+.#{$border-prefix}-dashed {
+	border-style: dashed;
+}
+
+.#{$border-prefix}-dotted {
+	border-style: dotted;
+}
+
+.#{$border-prefix}-none {
+	border-style: none;
+}
+
+//-----------------------------------------
+// Border colors
+//-----------------------------------------
+@each $key, $value in $colors {
+
+	// .#{$border-prefix}-{color}
+	.#{$border-prefix}-#{$key} {
+		border-color: $value;
+	}
+}
+
+
+//-----------------------------------------
+// Border Radius
+//-----------------------------------------
+@each $key, $value in $border-radius {
+
+	.#{$border-prefix}r-#{$key} {
+		border-radius: $value;
+	}
+}

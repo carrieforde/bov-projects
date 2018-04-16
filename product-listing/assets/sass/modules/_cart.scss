@@ -1,0 +1,94 @@
+// ----------------------------------------------------------------------------
+// CART
+// ----------------------------------------------------------------------------
+.cart {
+	font-size: em(16, 15);
+
+	// .cart__row
+	&__row {
+		border-bottom: 1px solid $color__white-smoke;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: rem(30);
+	}
+
+	// .cart__header
+	&__header {
+
+		h3 {
+			font-size: em(14, 16);
+		}
+	}
+
+	&__footer {
+		align-items: center;
+		border-bottom: 0;
+		padding: rem(15) rem(7);
+	}
+
+	&__coupon {
+		grid-column-end: 9;
+		grid-column-start: 1;
+		position: relative;
+
+		label {
+			@include position(absolute, 150% null null rem(15));
+
+			transform: translateY(-50%);
+		}
+
+		button {
+			@include position(absolute, 0 0 0 null);
+		}
+	}
+}
+
+//-----------------------------------------------
+// Cart columns
+//-----------------------------------------------
+.cart-col {
+
+	&--1 {
+		grid-column-end: 7;
+		grid-column-start: 1;
+	}
+
+	&--2 {
+		grid-column-end: 9;
+		grid-column-start: 7;
+	}
+
+	&--3 {
+		grid-column-end: 11;
+		grid-column-start: 9;
+	}
+
+	&--4 {
+		grid-column-start: 11; 
+	}
+}
+
+//-----------------------------------------------
+// Cart Item
+//-----------------------------------------------
+.cart-item {
+	align-items: center;
+	padding: rem(15) rem(7);
+
+	&__image {
+		width: rem(100);
+	}
+
+	&__heading {
+		font-size: em(16);
+		margin: 0 0 0 rem(22);
+	}
+}
+
+.coupon {
+	border: 1px solid $color__gainsboro;
+	border-radius: 6px;
+	font-size: em(14, 16);
+	padding: em(10, 14) em(15, 14);
+	width: 100%;
+}

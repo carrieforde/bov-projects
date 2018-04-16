@@ -1,0 +1,23 @@
+//--------------------------------------------------------------
+// BACKGROUND
+//--------------------------------------------------------------
+.bg {
+
+	&-pos {
+
+		&-center {
+			background-position: center;
+		}
+	}
+
+	&-size {
+
+		&-cover {
+			background-size: cover;
+		}
+
+		&-contain {
+			background-size: contain;
+		}
+	}
+}

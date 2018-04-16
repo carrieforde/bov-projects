@@ -1,0 +1,62 @@
+/*
+ * Profile card styles
+ */
+
+* {
+	box-sizing: border-box;
+}
+
+.profile-card {
+	background-color: #f1ece4;
+	border: 1px solid #939473;
+	color: #211d23;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	max-width: 100%;
+	padding: 25px;
+	width: 375px;
+}
+
+.profile-card__header h2 {
+	color: #3d96b6;
+	margin-top: 0;
+}
+
+.profile-card img {
+	display: block;
+	line-height: 1;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.profile-card__content h3 {
+	margin-top: 1.5em;
+}
+
+.profile-card__footer {
+	margin-top: 2em;
+}
+
+.button {
+	display: inline-block;
+}
+
+.button--text {
+	color: #1974ad;
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+.button--text:hover {
+	color: #4790bd;
+}
+
+.arrow {
+	display: inline-block;
+	margin-right: 3px;
+	transition: transform 0.3s ease-in-out;
+}
+
+.button--text:hover .arrow {
+	transform: translateX(-5px);
+}

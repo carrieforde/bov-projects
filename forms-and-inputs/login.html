@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/sanitize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Login</title>
+</head>
+
+<body class="login">
+	<main class="page">
+		<header class="page__header">
+			<h1>Login</h1>
+			<a href="index.html"><span class="arrow">&larr;</span>Back to Home</a>
+		</header>
+
+		<div class="page__content">
+			<form method="POST" action="" class="login-form" id="login-form">
+				<ul>
+					<li>
+						<label for="username">Username</label>
+						<input type="text" id="username" placeholder="Username">
+					</li>
+					<li>
+						<label for="password">Password</label>
+						<input type="password" id="password" placeholder="Password">
+					</li>
+					<li>
+						<input type="checkbox" id="remember">
+						<label for="remember" class="checkbox">Remember Me</label>
+					</li>
+					<li>
+						<input type="submit" class="button button-success" id="submit" value="Login">
+					</li>
+				</ul>
+			</form>
+		</div>
+	</main>
+	<script src="scripts/validator.js"></script>
+	<script src="scripts/utilities.js"></script>
+	<script src="scripts/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+//--------------------------------------------------------------
+// TABS
+//--------------------------------------------------------------
+.tabs {
+	margin-top: rem(40);
+
+	@include media($tablet-portrait-up, null) {
+		display: flex;
+		margin-top: rem(60);
+	}
+
+	// .tabs__nav
+	&__nav {
+		@include list-reset;
+
+		border: $border__tabs;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		@include media(null, $tablet-portrait-up) {
+			border-bottom: 0;
+		}
+
+		@include media($tablet-portrait-up, null) {
+			border: 0;
+			flex: 0 0 25%;
+			text-align: right;
+		}
+
+		li {
+			border-top: 0;
+
+			&.is-active {
+
+				@include media($tablet-portrait-up, null) {
+					background-color: color('white');
+					border: $border__tabs;
+					border-right: 0;
+					margin-right: rem(-1);
+					position: relative;
+				}
+
+				a {
+					color: color(razzmatazz);
+				}
+			}
+
+			@include media(null, $tablet-portrait-up) {
+				background-color: color('white');
+
+				+ li {
+					border-top: $border__tabs;
+				}
+			}
+		}
+
+		a {
+			color: color(charcoal);
+			display: block;
+			margin-top: rem(-3);
+			padding: rem(10) rem(15);
+			text-decoration: none;
+
+			.is-active & {
+				color: color(razzmatazz);
+				font-weight: 600;
+			}
+		}
+	}
+
+	// .tabs__content
+	&__content {
+		background-color: color('white');
+		border: $border__tabs;
+		display: none;
+		padding: rem(20) rem(40);
+
+		&.is-active {
+			display: block;
+		}
+	}
+}
+
+
+//-----------------------------------------
+// Project-specific styles
+//-----------------------------------------
+#profileCardPanel {
+
+	> div {
+
+		img {
+			display: block;
+			margin: 0 auto;
+			width: rem(350);
+		}
+	}
+}
+
+#calculatorPanel {
+
+	.carousel {
+		height: rem(445);
+	}
+}
+
+#formsPanel {
+
+	.carousel {
+		height: rem(379);
+	}
+}
+
+#productListingPanel {
+
+	.carousel__slide {
+		text-align: center;
+		width: 100%;
+	}
+
+	&:not(:first-of-type) {
+
+		img {
+			width: rem(350);
+		}
+	}
+}

@@ -1,0 +1,15 @@
+// ----------------------------------------------------------------------------
+// HEADER
+// ----------------------------------------------------------------------------
+.site-header {
+	border-bottom: 1px solid $color__athens-gray;
+	padding: $gutter;
+
+	@include media($desktop-up, null) {
+		padding: rem(30) rem(50);
+	}
+
+	@include media($desktop-xl-up, null) {
+		padding: rem(60) rem(100);
+	}
+}

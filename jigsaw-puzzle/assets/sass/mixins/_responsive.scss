@@ -1,0 +1,47 @@
+/// Generates responsive classes.
+///
+/// @author Carrie Forde
+///
+/// @param  {String}           $property        -  A CSS property to render.
+/// @param  {String | Number}  $value           -  The value corresponding to the passed `$property`.
+/// @param  {String}           $classname ['']  - The desired classname (optional).
+///
+/// @example - scss Usage
+///   @include responsive(display, flex);
+///
+/// @example - css Sample Output
+///  .sm:flex, .m:flex, .l:flex, .xl:flex { display: flex; }
+///
+/// @example - markup Sample Usage
+///  <header class="m:flex"></header>
+///
+@mixin responsive($property, $value, $classname: '') {
+
+	@if ($classname != '') {
+		.#{$classname} {
+			#{$property}: $value;
+		}
+	} @else {
+		.#{$value} {
+			#{$property}: $value;
+		}
+	}
+
+	@each $bp-name, $bp-value in $breakpoints {
+
+		@if ($classname != '') {
+			
+			.#{$breakpoint-prefix}#{$bp-name}\:#{$classname} {
+				@media screen and (min-width: #{$bp-value}) {
+					#{$property}: $value;
+				}
+			}
+		} @else {
+			.#{$breakpoint-prefix}#{$bp-name}\:#{$value} {
+				@media screen and (min-width: #{$bp-value}) {
+					#{$property}: $value;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+// ----------------------------------------------------------------------------
+// COOKIE MESSAGE
+// ----------------------------------------------------------------------------
+.cookieMessage {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.cookieDismissed & {
+		max-height: 0;
+		overflow: hidden;
+		padding: 0 20px;
+	}
+}

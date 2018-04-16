@@ -1,0 +1,83 @@
+//--------------------------------------------------------------
+// CAROUSEL
+//--------------------------------------------------------------
+.carousel {
+	@include center;
+
+	max-width: 100%;
+	padding: rem(20);
+	position: relative;
+	width: 100%;
+
+	// .carousel__slides
+	&__slides {
+		display: flex;
+		overflow-x: auto;
+	}
+
+	// .carousel__slide
+	&__slide {
+		flex-shrink: 1;
+		opacity: 0;
+		overflow: hidden;
+		transition: $transition__opacity;
+
+		&.is-active {
+			flex-shrink: 0;
+			opacity: 1;
+			width: 100%;
+		}
+	}
+
+	// .carousel__dots
+	&__dots {
+		@include position(absolute, null 0 rem(-5) 0);
+
+		text-align: center;
+
+		a {
+			@include size(rem(10));
+
+			background-color: color(classic-rose);
+			border-radius: 50%;
+			display: inline-block;
+			transition: $transition__height, $transition__width;
+			transition-duration: 0.5s;
+			vertical-align: middle;
+
+			+ a {
+				margin-left: rem(10);
+			}
+
+			&.is-active {
+				@include size(rem(12));
+
+				background-color: color(razzmatazz);
+			}
+		}
+	}
+
+	// .carousel__button
+	&__button {
+		@include position(absolute, 50% null null null);
+
+		background-color: transparent;
+		color: color(razzmatazz);
+		transform: translateY(-50%);
+		z-index: 2;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+		}
+
+		&--previous {
+			left: rem(-20);
+		}
+
+		&--next {
+			right: rem(-20);
+		}
+	}
+} // .carousel

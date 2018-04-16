@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Bov Jigsaw Puzzle</title>
+		<link href="https://fonts.googleapis.com/css?family=Contrail+One|PT+Sans+Narrow:400,700" rel="stylesheet">
+		<link href="dist/style.min.css?version=1.0.1" rel="stylesheet">
+	</head>
+
+	<body class="pt-sans max-h-screen w-screen o-hidden">
+		<main class="p-20 flex ai-center jc-center bg-montana h-screen">
+			<section id="beginPanel" class="fixed pos-t-0 pos-l-0 h-screen w-screen flex ai-center jc-center z-31 bg-midnight-sheer trs-z">
+				<form class="text-center text-white">
+					<h2 class="contrail font-giant text-white m-0">Choose Difficulty</h2>
+					<p class="checked">
+						<label for="levelEasy" class="font-big ls-wide bg-white-03 b-thin br-50 b-white p-v-quarterem block trs-bgc trs-fw">Easy</label>
+						<input type="radio" name="level" id="levelEasy" value="Easy" data-time="10" data-hints="5" class="screen-reader-text" checked>
+					</p>
+					<p>
+						<label for="levelIntermediate" class="font-big ls-wide bg-white-03 b-thin br-50 b-white p-v-quarterem block trs-bgc trs-fw">Intermediate</label>
+						<input type="radio" name="level" id="levelIntermediate" value="Intermediate" data-time="7" data-hints="3" class="screen-reader-text">
+					</p>
+					<p>
+						<label for="levelHard" class="font-big ls-wide bg-white-03 b-thin br-50 b-white p-v-quarterem block trs-bgc trs-fw">Hard</label>
+						<input type="radio" name="level" id="levelHard" value="Hard" data-time="1" data-hints="1" class="screen-reader-text">
+					</p>
+					<button id="beginPuzzle" type="button" class="pt-sans bg-night-shadz text-white font-big ls-wide p-v-halfem p-h-em">Begin</button>
+				</form>
+			</section>
+
+			<section class="relative">
+				<div class="w-pp h-pp absolute pos-row7 pos-col9" data-piece="5"></div>
+				<div class="w-pp h-pp absolute pos-row5 pos-col9" data-piece="6"></div>
+				<div class="w-pp h-pp absolute pos-row8 pos-col8" data-piece="7"></div>
+				<div class="w-pp h-pp absolute pos-row6 pos-col8" data-piece="8"></div>
+				<div class="w-pp h-pp absolute pos-row7 pos-col7" data-piece="9"></div>
+				<div class="w-pp h-pp absolute pos-row5 pos-col7" data-piece="10"></div>
+				<div class="w-pp h-pp absolute pos-row8 pos-col6" data-piece="11"></div>
+				<div class="w-pp h-pp absolute pos-row6 pos-col6" data-piece="12"></div>
+				<div class="w-pp h-pp absolute pos-row7 pos-col5" data-piece="13"></div>
+				<div class="w-pp h-pp absolute pos-row5 pos-col5" data-piece="14"></div>
+				<div class="w-pp h-pp absolute pos-row8 pos-col4" data-piece="15"></div>
+				<div class="w-pp h-pp absolute pos-row6 pos-col4" data-piece="16"></div>
+				<div class="w-pp h-pp absolute pos-row7 pos-col3" data-piece="17"></div>
+				<div class="w-pp h-pp absolute pos-row5 pos-col3" data-piece="18"></div>
+				<div class="w-pp h-pp absolute pos-row9 pos-col9" data-piece="19"></div>
+				<div class="w-pp h-pp absolute pos-row9 pos-col7" data-piece="20"></div>
+				<div class="w-pp h-pp absolute pos-row9 pos-col5" data-piece="21"></div>
+				<div class="w-pp h-pp absolute pos-row9 pos-col3" data-piece="22"></div>
+				<div class="w-pp h-pp absolute pos-row9 pos-col1" data-piece="23"></div>
+				<div class="w-pp h-pp absolute pos-row8 pos-col2" data-piece="24"></div>
+				<div class="w-pp h-pp absolute pos-row6 pos-col2" data-piece="25"></div>
+				<div class="w-pp h-pp absolute pos-row7 pos-col1" data-piece="26"></div>
+				<div class="w-pp h-pp absolute pos-row5 pos-col1" data-piece="27"></div>
+				<div class="w-pp h-pp absolute pos-row3 pos-col9" data-piece="28"></div>
+				<div class="w-pp h-pp absolute pos-row1 pos-col9" data-piece="29"></div>
+				<div class="w-pp h-pp absolute pos-row4 pos-col8" data-piece="30"></div>
+				<div class="w-pp h-pp absolute pos-row2 pos-col8" data-piece="31"></div>
+				<div class="w-pp h-pp absolute pos-row3 pos-col7" data-piece="32"></div>
+				<div class="w-pp h-pp absolute pos-row1 pos-col7" data-piece="33"></div>
+				<div class="w-pp h-pp absolute pos-row4 pos-col6" data-piece="34"></div>
+				<div class="w-pp h-pp absolute pos-row2 pos-col6" data-piece="35"></div>
+				<div class="w-pp h-pp absolute pos-row3 pos-col5" data-piece="36"></div>
+				<div class="w-pp h-pp absolute pos-row1 pos-col5" data-piece="37"></div>
+				<div class="w-pp h-pp absolute pos-row4 pos-col4" data-piece="38"></div>
+				<div class="w-pp h-pp absolute pos-row2 pos-col4" data-piece="39"></div>
+				<div class="w-pp h-pp absolute pos-row3 pos-col3" data-piece="40"></div>
+				<div class="w-pp h-pp absolute pos-row1 pos-col3" data-piece="41"></div>
+				<div class="w-pp h-pp absolute pos-row4 pos-col2" data-piece="42"></div>
+				<div class="w-pp h-pp absolute pos-row2 pos-col2" data-piece="43"></div>
+				<div class="w-pp h-pp absolute pos-row3 pos-col1" data-piece="44"></div>
+				<div class="w-pp h-pp absolute pos-row1 pos-col1" data-piece="45"></div>
+
+				<div id="puzzle" class="bg-pos-center bg-black p-20" style="background-image: url('dist/images/puzzle-bg-unsolved.png');">
+					<img src="dist/images/puzzle-solved.png" alt="Solved Puzzle" id="solvedPuzzle" class="block m-h-auto trs-v relative">
+				</div>
+
+				<div class="flex jc-between bg-marzipan">
+					<button type="button" class="bg-boulder text-white p-h-em p-v-halfem font-medium pt-sans ls-wide br-0" id="hintButton">Hint</button>
+					<p>Time Remaining: <time id="timer"></time></p>
+					<button type="button" class="bg-boulder text-white p-h-em p-v-halfem font-medium pt-sans ls-wide br-0" id="resetPuzzle">Reset</button>
+				</div>
+			</section>
+
+			<section id="puzzlePieces" class="oy-scroll trs-tf text-center p-h-10 p-v-20 b-thick b-dashed b-boulder bg-iron"></section>
+
+			<section id="gameOver" class="bg-midnight-sheer flex flex-column ai-center jc-center fixed pos-t-0 pos-l-0 h-screen w-screen z--1 trs-z">
+				<div id="gameOverMessage" class="font-giant contrail text-white"></div>
+				<button type="button" id="tryAgain" class="pt-sans bg-night-shadz text-white font-big ls-wide p-v-halfem p-h-em">Try Again</button>
+			</section>
+		</main>
+		<script src="dist/app.min.js?version=1.0.1"></script>
+	</body>
+</html>

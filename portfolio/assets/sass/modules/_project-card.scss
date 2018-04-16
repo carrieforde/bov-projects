@@ -1,0 +1,60 @@
+//--------------------------------------------------------------
+// PROJECT CARD
+//--------------------------------------------------------------
+.project-card {
+	margin-top: rem(40);
+	padding: 0 rem(20);
+
+	// .project-card__header
+	&__header {
+
+		@include media($tablet-landscape-up, null) {
+			align-items: center;
+			display: flex;
+			justify-content: flex-start;
+			margin-bottom: 0.5em;
+		}
+
+		h2,
+		p {
+			margin-bottom: 0;
+		}
+
+		p {
+			margin-bottom: rem(3); // helps vertically center text.
+			
+			@include media($tablet-landscape-up, null) {
+				margin-left: rem(10);
+			}
+		}
+	}
+
+	// .project-card__footer
+	&__footer {
+
+		a {
+			color: color(charcoal);
+			display: inline-block;
+			text-decoration: none;
+
+			+ a {
+				margin-left: rem(20);
+			}
+
+			&:hover,
+			&:active,
+			&:focus {
+				color: color(razzmatazz);
+			}
+
+			.fa {
+				color: color(razzmtazz);
+				margin-right: rem(5);
+			}
+
+			.fa-github {
+				font-size: rem(20);
+			}
+		}
+	}
+}

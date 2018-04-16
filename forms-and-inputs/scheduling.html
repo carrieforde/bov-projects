@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/sanitize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Scheduling</title>
+</head>
+
+<body>
+	<main class="page">
+		<header class="page__header">
+			<h1>Scheduling</h1>
+			<a href="index.html"><span class="arrow">&larr;</span>Back to Home</a>
+		</header>
+
+		<div class="page__content">
+			<form method="GET" action="" id="sign-up">
+				<ul>
+					<li>
+						<label for="first-name">First Name</label>
+						<input type="text" id="first-name" placeholder="First Name">
+					</li>
+					<li>
+						<label for="last-name">Last Name</label>
+						<input type="text" id="last-name" placeholder="Last Name">
+					</li>
+					<li>
+						<label for="email">Email Address</label>
+						<input type="email" id="email" placeholder="email@example.com">
+					</li>
+					<li>
+						<label for="telephone">Phone Number</label>
+						<input type="text" id="telephone" placeholder="555-555-5555">
+					</li>
+					<li>
+						<label for="date">Choose a date</label>
+						<input type="date" id="date">
+					</li>
+					<li>
+						<label for="time">Choose a time between 9a.m. and 5p.m.</label>
+						<input type="time" id="time">
+					</li>
+					<li>
+						<label for="timezone">Choose your timezone</label>
+						<select>
+							<option value="" disabled selected>Timezone</option>
+							<option value="ET">Eastern Time</option>
+							<option value="CT">Central Time</option>
+							<option value="MT">Mountain Time</option>
+							<option value="PT">Pacific Time</option>
+						</select>
+					</li>
+					<li>
+						<input type="submit" class="button button-primary" id="submit" value="Request Time">
+					</li>
+				</ul>
+			</form>
+		</div>
+	</main>
+	<script src="scripts/validator.js"></script>
+	<script src="scripts/utilities.js"></script>
+	<script src="scripts/scheduling.js"></script>
+</body>
+
+</html>

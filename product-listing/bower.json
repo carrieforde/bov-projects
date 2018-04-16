@@ -1,0 +1,20 @@
+{
+  "name": "bov-product-listing",
+  "description": "A simple product listing page.",
+  "main": "index.js",
+  "authors": [
+    "Carrie Forde"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/carrieforde/bov-product-listing",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "handlebars": "^4.0.11"
+  }
+}

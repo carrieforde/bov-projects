@@ -1,0 +1,64 @@
+//--------------------------------------------------------------
+// THEME
+//--------------------------------------------------------------
+.grid {
+	grid-template-columns: 900px 1fr;
+	grid-gap: 40px;
+}
+
+#puzzlePieces {
+	height: calc(100vh - 40px);
+	transform: translateY(calc(-100% - 20px));
+
+	&.slide-in {
+		transform: translateY(0);
+	}
+}
+
+[draggable="true"] {
+	cursor: move;
+}
+
+//-----------------------------------------
+// Puzzle Positioning
+//-----------------------------------------
+@each $key, $value in $puzzle-cols {
+
+	.pos-#{$key} {
+		left: $value;
+	}
+}
+
+@each $key, $value in $puzzle-rows {
+
+	.pos-#{$key} {
+		top: $value;
+	}
+}
+
+@each $key, $value in $opacity {
+
+	.o-#{$key} {
+		opacity: $value;
+	}
+}
+
+.checked {
+
+	label {
+		background-color: rgba(map-get($colors, mineral-green), 0.3);
+		border-color: map-get($colors, mineral-green);
+		font-weight: 700;
+		letter-spacing: 0.075em;
+		padding: 7px 30px 5px;
+	}
+}
+
+label {
+	transition: background-color, font-weight 0.3s ease-in-out;
+
+	&:hover {
+		border-color: map-get($colors, marzipan);
+		background-color: rgba(map-get($colors, marzipan), 0.3);
+	}
+}

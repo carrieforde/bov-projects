@@ -1,0 +1,45 @@
+//--------------------------------------------------------------
+// MAIN
+//
+// Manifest for the project Sass.
+//--------------------------------------------------------------
+
+
+// Functions
+@import 'utilities/functions/color';
+@import 'utilities/functions/strip-units';
+@import 'utilities/functions/px-to-em';
+@import 'utilities/functions/px-to-rem';
+
+// Config
+@import 'config';
+
+// Bourbon
+@import 'bourbon';
+
+// Mixins
+@import 'utilities/mixins/colors';
+@import 'utilities/mixins/media';
+
+// Reset
+@import 'sanitize';
+
+// Base
+@import 'base/buttons';
+@import 'base/forms';
+@import 'base/media';
+@import 'base/typography';
+@import 'base/utilities';
+
+// Modules
+@import 'modules/menus';
+@import 'modules/product';
+@import 'modules/widget';
+@import 'modules/modal';
+@import 'modules/increment';
+@import 'modules/cart';
+
+// Layout
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';

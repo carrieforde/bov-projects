@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------------------
+// INCREMENT
+// ----------------------------------------------------------------------------
+.increment {
+	margin-top: $gutter;
+
+	.button {
+		color: $color__aluminum;
+	}
+
+	input[type="number"] {
+		border: 1px solid $color__gainsboro;
+		border-radius: $border__radius;
+		text-align: center;
+		width: calc(100% - 120px);
+	}
+
+	.cart-item & {
+		margin-top: 0;
+
+		.button {
+			padding: em(5, 16) em(10, 16);
+		}
+
+		input[type="number"] {
+			width: calc(100% - 70px);
+		}
+	}
+}

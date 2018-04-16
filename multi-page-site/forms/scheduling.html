@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="../css/sanitize.css">
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<link rel="stylesheet" type="text/css" href="../css/forms.css">
+		<title>Forms & Inputs - Scheduling</title>
+	</head>
+
+	<body>
+		<header class="site-header flex-center-between-900">
+			<p class="site-title"><a href="../index.html">Carrie Forde</a></p>
+			<nav class="main-navigation">
+				<ul class="menu">
+					<li class="menu-item"><a href="../buttons.html">Button Components</a></li>
+					<li class="menu-item"><a href="../profile-sidebar.html">Profile Sidebar</a></li>
+					<li class="menu-item current-menu-item"><a href="../forms.html">Forms & Inputs</a></li>
+					<li class="menu-item"><a href="../calculator.html">Calculator</a></li>
+					<li class="menu-item"><a href="../product-listing.html">Product Listing Page</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="page">
+			<header class="page__header full-width">
+				<h1 class="page__title">Scheduling</h1>
+				<a href="../forms.html"><span class="arrow">&larr;</span>Back to Forms</a>
+			</header>
+
+			<div class="page__content full-width">
+				<form method="GET" action="" id="sign-up">
+					<ul>
+						<li>
+							<label for="first-name">First Name</label>
+							<input type="text" id="first-name" placeholder="First Name">
+						</li>
+						<li>
+							<label for="last-name">Last Name</label>
+							<input type="text" id="last-name" placeholder="Last Name">
+						</li>
+						<li>
+							<label for="email">Email Address</label>
+							<input type="email" id="email" placeholder="email@example.com">
+						</li>
+						<li>
+							<label for="telephone">Phone Number</label>
+							<input type="tel" id="telephone" placeholder="555-555-5555">
+						</li>
+						<li>
+							<label for="date">Choose a date</label>
+							<input type="date" id="date">
+						</li>
+						<li>
+							<label for="time">Choose a time</label>
+							<input type="time" id="time">
+						</li>
+						<li>
+							<label for="timezone">Choose your timezone</label>
+							<select>
+								<option value="" disabled selected>Timezone</option>
+								<option value="ET">Eastern Time</option>
+								<option value="CT">Central Time</option>
+								<option value="MT">Mountain Time</option>
+								<option value="PT">Pacific Time</option>
+							</select>
+						</li>
+						<li>
+							<input type="submit" class="button button-primary" id="submit" value="Request Time">
+						</li>
+					</ul>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>

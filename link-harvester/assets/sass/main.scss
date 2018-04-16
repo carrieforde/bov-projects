@@ -1,0 +1,99 @@
+//--------------------------------------------------------------
+// MAIN
+//
+// This is the mainifest for the project Sass.
+//--------------------------------------------------------------
+
+// Utilities
+@import 'bourbon';
+@import 'config/index';
+@import 'sanitize';
+
+// Elements
+@import 'elements/buttons';
+@import 'elements/forms';
+@import 'elements/typography';
+@import 'elements/media';
+
+// Layout
+@import 'layout/flexbox';
+
+// States
+@import 'states/is-hidden';
+
+// General page styles (for now)
+body {
+	@include media($tablet-landscape-up, null) {
+		background-color: $color__light-gray;
+	}
+}
+
+.site-header,
+.site-footer {
+	padding: 20px;
+
+	@include media($tablet-landscape-up, null) {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.site-info {
+	font-family: $font__heading;
+	font-size: rem(24);
+	font-weight: 700;
+	margin-bottom: 0;
+	text-decoration: none;
+}
+
+.page {
+	@include center-block;
+
+	max-width: 100%;
+	padding: 20px;
+	width: rem(1100);
+}
+
+.site-footer {
+	background-color: $color__dark-gray;
+	color: $color__white;
+
+	@include media(null, $tablet-landscape-up) {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: $color__white;
+	}
+}
+
+.module {
+	background-color: $color__white;
+	padding: $gutter__double $gutter $gutter * 3;
+
+	@include media($tablet-portrait-up, null) {
+		padding: $gutter * 3 rem(20) $gutter * 4.5;
+	}
+
+	+ .module {
+		margin-top: $gutter__double;
+	}
+}
+
+.menu {
+
+	h4 {
+		margin-bottom: 0;
+	}
+}
+
+.html-text {
+	font-family: $font__code;
+	word-wrap: normal;
+}

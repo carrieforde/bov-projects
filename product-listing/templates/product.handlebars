@@ -1,0 +1,28 @@
+{{#each this}}
+<article class="product" id="product{{id}}" data-type="{{#if sale}}sale{{else}}normal{{/if}}">
+	<header class="product__header">
+		<img src="assets/images/{{image}}" class="product__image" alt="{{name}}">
+		<h2 class="product__heading">{{name}}</h2>
+		{{productBadge}}
+	</header>
+	<div class="product__content poppins text--iron">
+		{{#if sale}}
+			<span class="price price--on-sale price__sale text--danger">${{price.sale}}</span>
+			&ndash;
+			<span class="price price--on-sale price__regular">${{price.regular}}</span>
+		{{else}}
+			<span class="price price__regular text--primary">${{price.regular}}</span>
+		{{/if}}
+	</div>
+	<footer class="product__footer bg--white">
+		{{description}}
+		<div class="increment flex justify-between">
+			<button class="button button--outline minus" type="button">&minus;</button>
+			<label for="prod{{id}}" class="hide-text">Quantity</label>
+			<input class="qty" type="number" id="prod{{id}}" name="prod{{id}}" value="1">
+			<button class="button button--outline plus" type="button">&plus;</button>
+		</div>
+		<button class="button button--add-to-cart">Add to cart</button>
+	</div>
+</article>
+{{/each}}

@@ -1,0 +1,86 @@
+//--------------------------------------------------------------
+// SPACING
+//--------------------------------------------------------------
+
+//-----------------------------------------
+// Margins
+//-----------------------------------------
+@each $key, $value in $margin-sizes {
+
+	// .#{$project-prefix}#{$margin-prefix}-{size}
+	.#{$project-prefix}#{$margin-prefix}-#{$key} {
+		margin: $value;
+	}
+
+	// .#{$project-prefix}#{$margin-prefix}-#{$vertical}-{size}
+	.#{$project-prefix}#{$margin-prefix}-#{$vertical}-#{$key} {
+		margin-bottom: $value;
+		margin-top: $value;
+	}
+
+	// .#{$project-prefix}#{$margin-prefix}-#{$horizontal}-{size}
+	.#{$project-prefix}#{$margin-prefix}-#{$horizontal}-#{$key} {
+		margin-left: $value;
+		margin-right: $value;
+	}
+
+	// .#{$project-prefix}#{$margin-prefix}t-{size}
+	.#{$project-prefix}#{$margin-prefix}-#{$top}-#{$key} {
+		margin-top: $value;
+	}
+
+	// .#{$project-prefix}#{$margin-prefix}-#{$right}-{size}
+	.#{$project-prefix}#{$margin-prefix}-#{$right}-#{$key} {
+		margin-right: $value;
+	}
+
+	// .#{$project-prefix}#{$margin-prefix}b-{size}
+	.#{$project-prefix}#{$margin-prefix}-#{$bottom}-#{$key} {
+		margin-bottom: $value;
+	}
+
+	// .#{$project-prefix}#{$margin-prefix}l-{size}
+	.#{$project-prefix}#{$margin-prefix}-#{$left}-#{$key} {
+		margin-left: $value;
+	}
+}
+
+@each $key, $value in $padding-sizes {
+
+	// .p-{size}
+	.p-#{$key} {
+		padding: $value;
+	}
+
+	// .p-#{$vertical}-{size}
+	.p-#{$vertical}-#{$key} {
+		padding-bottom: $value;
+		padding-top: $value;
+	}
+
+	// .p-#{$horizontal}-{size}
+	.p-#{$horizontal}-#{$key} {
+		padding-left: $value;
+		padding-right: $value;
+	}
+
+	// .pt-{size}
+	.p-#{$top}-#{$key} {
+		padding-top: $value;
+	}
+
+	// .p-#{$right}-{size}
+	.p-#{$right}-#{$key} {
+		padding-right: $value;
+	}
+
+	// .pb-{size}
+	.p-#{$bottom}-#{$key} {
+		padding-bottom: $value;
+	}
+
+	// .pl-{size}
+	.p-#{$left}-#{$key} {
+		padding-left: $value;
+	}
+}

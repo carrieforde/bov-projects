@@ -1,0 +1,23 @@
+{
+  "name": "bov-portfolio",
+  "description": "A portfolio to showcase projects I've completed at Bov Academy.",
+  "main": "app.js",
+  "authors": [
+    "Carrie Forde"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/carrieforde/bov-portfolio",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "zepto": "^1.2.0",
+    "handlebars": "^4.0.11"
+  }
+}

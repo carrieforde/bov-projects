@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/sanitize.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+		<title>Search Form</title>
+	</head>
+
+	<body class="search">
+		<main class="page">
+			<header class="page__header">
+				<h1>Search Form</h1>
+				<a href="index.html"><span class="arrow">&larr;</span>Back to Home</a>
+			</header>
+
+			<div class="page__content">
+				<form method="GET" action="" class="search-form" id="search-form">
+					<label for="search">Search Recipes</label>
+					<input type="search" id="search" placeholder="Search Recipes">
+					<select>
+						<option value="" disabled selected>Choose a Category</option>
+						<option value="Breads">Breads</option>
+						<option value="Cakes">Cakes</option>
+						<option value="Cookies">Cookies</option>
+						<option value="Pies">Pies</option>
+						<option value="Sandwiches">Sandwiches</option>
+						<option value="Side Dishes">Side Dishes</option>
+					</select>
+					<input type="submit" class="button" id="submit" value="Search">
+				</form>
+			</div>
+		</main>
+	</body>
+	<script src="scripts/validator.js"></script>
+	<script src="scripts/utilities.js"></script>
+	<script src="scripts/search.js"></script>
+</html>

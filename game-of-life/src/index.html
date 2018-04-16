@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Game of Life</title>
+</head>
+<body>
+	<main class="page">
+		<form action="" id="gameSettings" class="gameSettings">
+			<ul class="list-reset">
+				<li>
+					<label for="boardSize">Board Size</label>
+					<input type="number" name="boardSize" id="boardSize" value="500">
+				</li>
+				<li>
+					<label for="cellSize">Cell Size</label>
+					<input type="number" name="cellSize" id="cellSize" value="25">
+				</li>
+				<li>
+					<input type="button" class="button" id="startGame" value="Start Game!">
+				</li>
+			</ul>
+		</form>
+
+		<canvas id="canvas" height="500" width="500"></canvas>
+		<button type="button" class="button" id="endGame">End Game</button>
+	</main>
+</body>
+</html>

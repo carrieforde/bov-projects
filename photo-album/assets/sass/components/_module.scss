@@ -1,0 +1,10 @@
+//--------------------------------------------------------------
+// MODULE
+//--------------------------------------------------------------
+.module {
+	padding: $gutter__double 0;
+
+	@include media($tablet-landscape-up, null) {
+		padding: $gutter * 3 0 $gutter * 4;
+	}
+}

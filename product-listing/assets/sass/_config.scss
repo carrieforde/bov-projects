@@ -1,0 +1,115 @@
+// ----------------------------------------------------------------------------
+// CONFIG
+// ----------------------------------------------------------------------------
+
+$root-font-size: 15;
+
+
+//-----------------------------------------------
+// Colors
+//-----------------------------------------------
+$colors: (
+	primary: #0038E3,
+	secondary: #458DFE,
+	black: #222,
+	aluminum: #999,
+	iron: #ccc,
+	gainsboro: #ddd,
+	athens-gray: #eee,
+	white-smoke: #f5f5f5,
+	alabaster: #fbfbfb,
+	white: #fff,
+	success: #96C07C,
+	danger: #D5382C
+);
+
+$color__primary: color(primary);
+$color__secondary: color(secondary);
+
+$color__black: color(black);
+$color__aluminum: color(aluminum);
+$color__gainsboro: color(gainsboro);
+$color__athens-gray: color(athens-gray);
+$color__white-smoke: color(white-smoke);
+$color__alabaster: color(alabaster);
+$color__white: color(white);
+
+$color__success: color(success);
+$color__danger: color(danger);
+
+
+//-----------------------------------------------
+// Fonts
+//-----------------------------------------------
+$poppins: 'Poppins', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+
+$font__body: $open-sans;
+$font__body-color: $color__aluminum;
+$font__body-line-height: 1.66;
+$font__body-size: $root-font-size;
+$font__body-weight: 400;
+
+$font__headings: $poppins;
+$font__headings-color: $color__black;
+$font__headings-line-height: $font__body-line-height;
+$font__headings-weight: 600;
+
+$font__h1: 2.8em; // 40px
+$font__h2: 2.4em; // 36px
+$font__h3: 2em; // 30px
+$font__h4: 1.867em; // 28px
+$font__h5: 1.6em; // 24px
+$font__h6: 1.33em; // 20px
+
+
+//-----------------------------------------------
+// Borders
+//-----------------------------------------------
+$border__default: 2px solid $color__gainsboro;
+$border__focus: 2px solid $color__primary;
+$border__invalid: 2px solid $color__danger;
+$border__valid: 2px solid $color__success;
+
+$border__radius: 6px;
+
+
+//-----------------------------------------------
+// Breakpoints
+//-----------------------------------------------
+$tablet-portrait-up: 600px;
+$tablet-landscape-up: 900px;
+$desktop-up: 1200px;
+$desktop-xl-up: 1800px;
+
+
+//-----------------------------------------------
+// Sizes
+//-----------------------------------------------
+$size__content: 1100px;
+
+$gutter: rem(20);
+
+
+//-----------------------------------------------
+// Transitions
+//-----------------------------------------------
+$timing: 0.3s ease-in-out;
+
+$transition__all: all $timing;
+$transition__background-color: background-color $timing;
+$transition__border-color: border-color $timing;
+$transition__box-shadow: box-shadow $timing;
+$transition__color: color $timing;
+$transition__max-height: max-height $timing;
+$transition__opacity: opacity $timing;
+$transition__top: top $timing;
+$transition__transform: transform $timing;
+$transition__z-index: z-index $timing;
+
+
+//-----------------------------------------------
+// Shadows
+//-----------------------------------------------
+$shadow__card: 1px 1px 15px 0 rgba($color__black, 0.15);
+$shadow__card-footer: 1px 6px 15px 0 rgba($color__black, 0.15);

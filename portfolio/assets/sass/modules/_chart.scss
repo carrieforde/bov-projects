@@ -1,0 +1,222 @@
+//--------------------------------------------------------------
+// CHARTS
+//--------------------------------------------------------------
+$data-levels: (10, 15, 20, 40, 60, 80, 90, 100);
+$data-colors: (ocean-boat-blue, lightening-yellow, neon-carrot, dark-pastel-green, honey-flower);
+
+.chart-wrapper {
+	margin: 0 auto rem(150);
+	max-width: rem(450);
+
+	@include media($tablet-landscape-up, null) {
+		float: left;
+		width: calc(50% - 60px);
+
+		&:nth-of-type(3) {
+			float: right;
+		}
+
+		&:last-of-type {
+			clear: both;
+			float: none;
+		}
+	}
+
+	h3 {
+		margin-bottom: 2em;
+		text-align: center;
+	}
+}
+
+.chart {
+
+	// .chart__label
+	&__label {
+		bottom: rem(-100);
+		display: block;
+		left: -25%;
+		position: absolute;
+		text-align: left;
+		transform: rotate(45deg);
+		width: rem(200);
+	}
+
+	// .chart--horizontal
+	&--horizontal {
+		margin-bottom: rem(100);
+		overflow: hidden;
+
+		span {
+			display: block;
+			float: left;
+			padding: rem(10);
+		}
+
+		[data-level="20"] {
+			width: 20%;
+		}
+
+		[data-level="80"] {
+			width: 80%;
+		}
+	}
+
+	// .chart--vertical
+	&--vertical {
+		@include list-reset;
+
+		border-bottom: $border__chart;
+		border-left: $border__chart;
+		display: flex;
+		height: rem(250);
+		justify-content: space-around;
+		position: relative;
+
+		li {
+			position: relative;
+			width: rem(30);
+
+			@each $color in $data-colors {
+				$i: index($data-colors, $color);
+				&:nth-of-type(#{$i}n) {
+
+					.bar {
+						background-color: color($color);
+					}
+				}
+			}
+
+			@include media(null, $tablet-portrait-up) {
+
+				&:last-of-type {
+
+					.tooltip {
+						left: rem(-200);
+
+						&:after {
+							bottom: 0;
+							left: auto;
+							margin: auto;
+							right: rem(-6);
+							top: 0;
+						}
+					}
+				}
+			}
+
+			@include media($tablet-landscape-up, null) {
+				width: rem(40);
+			}
+		}
+
+		.bar {
+			@include border-top-radius(5px);
+			@include position(absolute, null null 0 null);
+
+			width: 100%;
+
+			&:hover {
+
+				.tooltip {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+
+		@each $data-level in $data-levels {
+
+			[data-level="#{$data-level}"] {
+				height: $data-level * 1%;
+			}
+		}
+	}
+
+	&--front-end-development {
+		.chart__header {
+			color: color(razzmatazz);
+		}
+	}
+
+	&--back-end-development {
+		.chart__header {
+			color: color(french-gray);
+		}
+	}
+}
+
+.legend {
+	@include list-reset;
+
+	@include media(null, $tablet-portrait-up) {
+		font-size: em(9);
+	}
+
+	display: flex;
+	flex-direction: column-reverse;
+	float: left;
+	height: rem(250);
+	justify-content: space-between;
+	margin-right: rem(20);
+	text-align: right;
+
+	li {
+		&:first-of-type {
+			margin-bottom: rem(20);
+		}
+	}
+}
+
+.bar {
+	background-color: color(white-smoke);
+
+	// .bar--front-end
+	&--front-end {
+		@include border-left-radius(5px);
+
+		background-color: color(razzmatazz);
+		color: color('white');
+		text-align: left;
+	}
+
+	// .bar--back-end
+	&--back-end {
+		@include border-right-radius(5px);
+
+		background-color: color(french-gray);
+		color: color(charcoal);
+		text-align: right;
+	}
+}
+
+.tooltip {
+	@include position(absolute, rem(-50) 0 null rem(-85));
+
+	background-color: color(mine-shaft);
+	border-radius: 5px;
+	color: color('white');
+	display: block;
+	opacity: 0;
+	padding: rem(10);
+	transition: $transition__opacity;
+	visibility: hidden;
+	width: rem(200);
+	z-index: 2;
+
+	@include media($tablet-landscape-up, null) {
+		left: rem(-80);
+	}
+
+	&:after {
+		@include position(absolute, null 0 rem(-9) 0);
+		@include size(rem(20));
+
+		background-color: color(mine-shaft);
+		border-radius: 3px;
+		content: '';
+		display: block;
+		margin: 0 auto;
+		transform: rotate(45deg);
+		z-index: -1;
+	}
+}

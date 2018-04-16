@@ -1,0 +1,186 @@
+/**
+ * Multi-Page Site Styles
+ */
+
+body {
+	color: #211d23;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.5em;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+blockquote {
+	font-size: 1.5em;
+	font-style: italic;
+	margin: 0;
+	padding: 0 30px;
+	position: relative;
+}
+
+blockquote:after,
+blockquote:before {
+	font-size: 90px;
+	font-weight: 700;
+	line-height: 1;
+	height: 40px;
+	position: absolute;
+}
+
+blockquote:after {
+	bottom: 40px;
+	content: '\201d';
+	right: 0;
+}
+
+blockquote:before {
+	content: '\201c';
+	left: -5px;
+	top: -5px;
+}
+
+blockquote p {
+	margin-bottom: 1em;
+}
+
+cite {
+	font-style: normal;
+	font-size: 0.8em;
+	font-weight: 700;
+}
+
+.screen-reader-text {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 0.0625rem;
+	margin: -0.0625rem;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 0.0625rem;
+}
+
+.full-width {
+	left: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+	position: relative;
+	right: 50%;
+	width: 100vw;
+}
+
+.site-header {
+	padding: 20px;
+	text-align: center;
+}
+
+.site-header a,
+.site-header a:visited {
+	color: #211d23;
+	text-decoration: none;
+	transition: color 0.3s ease-in-out;
+}
+
+.site-header a:hover {
+	color: #666;
+}
+
+.site-title {
+	font-size: 2em;
+	font-weight: 700;
+	margin: 0;
+}
+
+.main-navigation {
+	margin-top: 20px;
+}
+
+.menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-item {
+	display: inline-block;
+}
+
+.menu-item + .menu-item {
+	margin-left: 20px;
+}
+
+.site-header .current-menu-item a {
+	color: #666;
+	font-weight: 700;
+}
+
+.page {
+	padding: 0 20px;
+}
+
+.hero {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.8) url('../images/architecture.jpg') no-repeat center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	min-height: 75vh;
+	padding: 30px 0;
+	position: relative;
+	text-align: center;
+}
+
+.hero:after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.hero__wrap {
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 30px;
+	width: 80%;
+}
+
+.hero__title {
+	margin-bottom: 0.25em;
+}
+
+.hero__sub-title {
+	margin-bottom: 1.25em;
+}
+
+@media screen and (min-width: 900px) {
+
+	.flex-center-between-900 {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.main-navigation {
+		margin-top: 0;
+	}
+
+	.hero {
+		align-items: center;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.hero:after {
+		content: none;
+	}
+
+	.hero__wrap {
+		background-color: transparent;
+		width: 45%;
+	}
+}

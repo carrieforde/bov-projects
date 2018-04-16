@@ -1,0 +1,87 @@
+/**
+ * Button Styles
+ */
+
+.button,
+.button:visited {
+	background-color: #999;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1em;
+	margin-bottom: 20px;
+	padding: 0.5em 1em;
+	text-decoration: none;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover,
+.button:active {
+	background-color: #adadad;
+}
+
+/*
+* Button Sizes
+*/
+.button-sm {
+	font-size: 0.8em;
+}
+
+.button-md {
+	font-size: 1.2em;
+}
+
+.button-lg {
+	font-size: 1.4em;
+}
+
+/*
+ * Button Styles
+ */
+.button-primary {
+	background-color: #3d96b6;
+}
+
+.button-primary:hover {
+	background-color: #64abc5;
+}
+
+.button-info {
+	background-color: #070607;
+}
+
+.button-info:hover {
+	background-color: #393839;
+}
+
+.button-success {
+	background-color: #48a86f;
+}
+
+.button-success:hover {
+	background-color: #6db98c;
+}
+
+.button-warning {
+	background-color: #c59737;
+}
+
+.button-warning:hover {
+	background-color: #d1ac5f;
+}
+
+.button-danger {
+	background-color: #f44336;
+}
+
+.button-danger:hover {
+	background-color: #f6695e;
+}
+
+@media screen and (min-width: 600px) {
+	.button + .button {
+		margin-left: 20px;
+	}
+}

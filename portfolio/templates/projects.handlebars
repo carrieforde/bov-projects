@@ -1,0 +1,83 @@
+{{#with this.[1]}}
+<section id="{{id}}" class="module module--{{id}} background--white-smoke">
+	<div class="row">
+		<header class="module__header">
+			<h2>{{title}}</h2>
+		</header>
+
+		<div class="module__content">
+			<p class="intro text-center">{{contentIntro}}</p>
+
+			<div id="tabs" class="tabs">
+				<ul class="tabs__nav">
+					{{#each projects}}
+					<li {{#position 1 @index}}class="is-active" {{/position}}>
+						<a id="{{camelCase project}}Tab" href="#{{camelCase project}}Panel" class="tabs__tab" role="tab" aria-controls="{{camelCase project}}Panel"
+						 aria-selected="{{#position 1 @index}}true{{else}}false{{/position}}">{{project}}</a>
+					</li>
+					{{/each}}
+				</ul>
+			
+				{{#each projects}}
+				<div id="{{camelCase project}}Panel" class="tabs__content {{#position 1 @index}}is-active{{/position}}" aria-labelledby="{{camelCase project}}Tab">
+					{{#with images}}
+					{{#matches this.length 1}} {{#each this}}
+					<div>
+						<img src="{{src}}" alt="{{alt}}">
+					</div>
+					{{/each}} {{else}}
+					
+					<div class="carousel">
+						<nav class="carousel__dots">
+							{{#each this}}
+							<a href="#slide-{{add @index 1}}" {{#position 1 @index}}class="is-active" {{/position}}>
+								<span class="screen-reader-text">{{alt}}</span>
+							</a>
+							{{/each}}
+						</nav>
+					
+						<nav class="carousel__arrows">
+							<button type="button" class="carousel__button carousel__button--previous">
+								<i class="fa fa-chevron-left" aria-hidden="true"></i>
+								<span class="screen-reader-text">Previous Slide</span>
+							</button>
+							<button type="button" class="carousel__button carousel__button--next">
+								<i class="fa fa-chevron-right" aria-hidden="true"></i>
+								<span class="screen-reader-text">Next Slide</span>
+							</button>
+						</nav>
+					
+						<div class="carousel__slides">
+							{{#each this}}
+							<div id="slide-{{add @index 1}}" class="carousel__slide {{#position 1 @index}}is-active{{/position}}">
+								<img src="{{src}}" alt="{{alt}}">
+							</div>
+							{{/each}}
+						</div>
+					</div>
+					{{/matches}}{{/with}}
+
+					<article class="project-card">
+						<header class="project-card__header">
+							<h2>Technologies Used:</h2>
+							<p class="intro">{{technologies}}</p>
+						</header>
+					
+						<div class="project-card__content">
+							<p>{{description}}</p>
+						</div>
+					
+						<footer class="project-card__footer">
+							<a href="{{demoURL}}">
+								<i class="fa fa-desktop" aria-hidden="true"></i> View Demo</a>
+							<a href="{{repoURL}}">
+								<i class="fa fa-github" aria-hidden="true"></i> View Code</a>
+						</footer>
+					</article>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</section>
+{{/with}}

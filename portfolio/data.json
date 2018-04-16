@@ -1,0 +1,289 @@
+[
+    {
+        "id": "about",
+        "title": "Why, hello there 🙋🏻",
+        "contentIntro": "I am a front-end engineer hailing from the San Francisco Bay Area, and I ❤️ atomic design, diversity & inclusion, and WordPress.",
+        "contentMain": "<p>I'm currently a full-time JavaScript student at Bov Academy. My goal is to fully understand the fundamentals of JavaScript so learning the new hotness in the JS framework community is easier than trying to learn framework by framework.</p> <p>When I'm not studying, you can find me contributing to open source WordPress projects, preparing for a WordCamp talk, or relaxing at home with my four cats. 😺 😺 😺 😺</p>",
+        "img": "dist/images/carrie_west-oakland_square.jpg",
+        "imgAlt": "Carrie Forde in West Oakland, CA"
+    },
+    {
+        "id": "projects",
+        "title": "Projects",
+        "contentIntro": "In the short time I've been studying at Bov Academy, I've had opportunities to show off my existing skills as a front-end developer, as well as flex my ever-growing JavaScript muscles. 💪",
+        "projects": [
+            {
+                "project": "Profile Card",
+                "technologies": "HTML5 & CSS3",
+                "description": "For this project, I created a simple profile card to display information about myself in the sidebar of a website.",
+                "demoURL": "https://carrieforde.github.io/bov-profile-card/",
+                "repoURL": "https://github.com/carrieforde/bov-profile-card",
+                "images": [
+                    {
+                        "src": "dist/images/profile-card.png",
+                        "alt": "Profile card"
+                    }
+                ]
+            },
+            {
+                "project": "Calculator",
+                "technologies": "HTML5, CSS3, Vanilla JavaScript",
+                "description": "For this project, I created working calculator using CSS Grid and vanilla JavaScript. I wanted the buttons to have some realistic play, so I added some fun transitions and transforms to get a squishy button effect.",
+                "demoURL": "https://carrieforde.github.io/bov-calculator/",
+                "repoURL": "https://github.com/carrieforde/bov-calculator",
+                "images": [
+                    {
+                        "src": "dist/images/calculator.png",
+                        "alt": "Calculator"
+                    },
+                    {
+                        "src": "dist/images/calculator-equation.png",
+                        "alt": "Calculator with equation"
+                    },
+                    {
+                        "src": "dist/images/calculator-result.png",
+                        "alt": "Calculator result"
+                    }
+                ]
+            },
+            {
+                "project": "Forms & Inputs",
+                "technologies": "HTML5, CSS3, Vanilla JavaScript",
+                "description": "For this project, I created a variety of forms using HTML5 inputs. Each form includes custom client-side validation via JavaScript. When a visitor enters incorrect or unexpected data, an <code>invalid</code> class is added which helps indicate which fields need addressing.",
+                "demoURL": "https://carrieforde.github.io/bov-forms-and-inputs/index.html",
+                "repoURL": "https://github.com/carrieforde/bov-forms-and-inputs",
+                "images": [
+                    {
+                        "src": "dist/images/color-builder.png",
+                        "alt": "Color builder form"
+                    },
+                   {
+                       "src": "dist/images/questionnaire.png",
+                       "alt": "Questionnaire form"
+                    },
+                    {
+                        "src": "dist/images/payment-form.png",
+                        "alt": "Payment form"
+                    },
+                    {
+                        "src": "dist/images/shipping-form.png",
+                        "alt": "Shipping form"
+                    }
+                ]
+            },
+            {
+                "project": "Product Listing",
+                "technologies": "HTML5, CSS3, Vanilla JavaScript",
+                "description": "For this project, I created a simple product listing for a fictional store, Pet Paradise. Visitors can \"shop\" the site, adding and removing items from the cart, adjusting quantities, and applying coupon codes (try FIVER for 5 percent off your order).",
+                "demoURL": "https://carrieforde.github.io/bov-product-listing/",
+                "repoURL": "https://github.com/carrieforde/bov-product-listing",
+                "images": [
+                    {
+                        "src": "https://carrieforde.github.io/bov-portfolio/dist/images/product-listing_products.png",
+                        "alt": "Products"
+                    },
+                    {
+                        "src": "https://carrieforde.github.io/bov-portfolio/dist/images/product-listing_product.png",
+                        "alt": "Product"
+                    },
+                    {
+                        "src": "https://carrieforde.github.io/bov-portfolio/dist/images/product-listing_cart.png",
+                        "alt": "Cart"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "skills",
+        "title": "Skills",
+        "contentIntro": "While I'm currently building upon my JavaScript skills, I have plenty of skills in development as a whole.",
+        "charts": [
+            {
+                "name": "Front-End vs. Back-End",
+                "type": "horizontal",
+                "skills": [
+                    {
+                        "skill": "front-end",
+                        "level": 80
+                    },
+                    {
+                        "skill": "back-end",
+                        "level": 20
+                    }
+                ]
+            },
+            {
+                "name": "Front-End Development",
+                "type": "vertical",
+                "skills": [
+                    {
+                        "skill": "HTML / CSS",
+                        "level": 100,
+                        "tooltip": "Expert: I've been working with HTML & CSS for 3 years."
+                    },
+                    {
+                        "skill": "JavaScript",
+                        "level": 60,
+                        "tooltip": "Competent: I know enough to be dangerous. 😼"
+                    },
+                    {
+                        "skill": "jQuery",
+                        "level": 80,
+                        "tooltip": "Proficient: jQuery makes DOM manipulation easy."
+                    },
+                    {
+                        "skill": "Atomic Design",
+                        "level": 90,
+                        "tooltip": "Expert: I've delivered several talks on the subject."
+                    },
+                    {
+                        "skill": "React",
+                        "level": 10,
+                        "tooltip": "Learning: eager to learn and use React!"
+                    }
+                ]
+            },
+            {
+                "name": "Back-End Development",
+                "type": "vertical",
+                "skills": [
+                    {
+                        "skill": "PHP",
+                        "level": 20,
+                        "tooltip": "Competent: I write WordPress-flavored PHP."
+                    },
+                    {
+                        "skill": "MySQL",
+                        "level": 15,
+                        "tooltip": "Competent: I can find my way around a database."
+                    },
+                    {
+                        "skill": "Mongo DB",
+                        "level": 10,
+                        "tooltip": "Learning: eager to learn."
+                    },
+                    {
+                        "skill": "Node",
+                        "level": 10,
+                        "tooltip": "Learning: eager to learn."
+                    },
+                    {
+                        "skill": "React",
+                        "level": 10,
+                        "tooltip": "Learning: eager to learn."
+                    }
+                ]
+            },
+            {
+                "name": "Other Skills",
+                "type": "vertical",
+                "skills": [
+                    {
+                        "skill": "WordPress",
+                        "level": 100,
+                        "tooltip": "Expert: I've been working with WordPress for 6 years."
+                    },
+                    {
+                        "skill": "Public Speaking",
+                        "level": 80,
+                        "tooltip": "Proficient: I have given several talks."
+                    },
+                    {
+                        "skill": "Written Communication",
+                        "level": 90,
+                        "tooltip": "Expert: I have worked as a journalist, and write articles."
+                    },
+                    {
+                        "skill": "Project Management",
+                        "level": 60,
+                        "tooltip": "Competent: I have a good understanding of the subject."
+                    },
+                    {
+                        "skill": "Research",
+                        "level": 90,
+                        "tooltip": "Proficient: I love digging into research projects."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "articles",
+        "title": "Articles",
+        "contentIntro": "Writing is an important part of the Bov Academy curriculum. These are some of the articles I have written.",
+        "articles": [
+            {
+                "id": 1,
+                "title": "The <code>isEqual</code> method",
+                "category": "DOM",
+                "content": "<p>The isEqualNode method allows developers to check whether a node has the same characteristics as the node against which it is compared. A node is considered equal when all characteristics, including attributes (e.g. id, class, data, aria, etc.), tags, and text content are the same. Let's look at an example:</p><pre class=\"language-html\"><code><div class=\"pink\">Minnie's best friend is Paul.</div>\n<div id=\"cat\" class=\"pink\">Minnie's best friend is Paul</div>\n<div class=\"pink\">Minnie's best friend is Twinnie, her mouse.</div>\n<div class=\"green\">Minnie's best friend is Paul.</div></code></pre><pre class=\"language-javascript\"><code>var divs = document.querySelectorAll('div');console.log('div 0 is equal to div 0: ' + divs[0].isEqualNode(divs[0])); // true/nconsole.log('div 0 is equal to div 1: ' + divs[0].isEqualNode(divs[1])); // false/nconsole.log('div 0 is equal to div 2: ' + divs[0].isEqualNode(divs[2])); // false/nconsole.log('div 0 is equal to div 3: ' + divs[0].isEqualNode(divs[3])); // false</code></pre><p>You'll notice from the results of our console logged comparisons, that even though the class and text content of the second div (<code>divs[1]</code>) is the same, the attached id causes the div to fail the test. Similarly, the third div, which has the same class, but different text fails, and the last div which has the same text content, but a different class fails. The <code>isEqualNode</code> method could be useful if you are performing DOM manipulation and want to ensure that you are not inserting duplicated nodes, or if you want to make sure two nodes are duplicates before removing one from the DOM.</p>",
+                "image": "https://picsum.photos/500/300"
+            },
+            {
+                "id": 2,
+                "title": "The structure of JSON documents",
+                "category": "JSON",
+                "content": "<p>JavaScript Object Notation (JSON), is an incredibly handy data format for working on the web. JSON is both human readable and machine readable, and can be used by several programming languages besides JavaScript including C++, Python, Java, etc.</p><p>What makes JSON so easy to work with is its easy-to-understand structure, which consists of objects ({}), arrays ([]), and key-value pairs. JSON comes wrapped in two ways: 1) as an object, or 2) as an array. A very basic JSON object may look like this:</p><pre class=\"language-javascript\"><code>{\n\t\"cat\": \"Whitney\",\n\t\"age\": 11,\n\t\"color\": \"Orange\",\n\t\"cute\": true,\n\t\"occupation\": undefined\n}</code></pre><p>You'll notice that this JSON object looks a lot like a regular JavaScript object. From the example above, we can see that values can include strings, numbers,true / false, and undefined. Additionally, JSON also allows null, objects, and arrays to be used as values.\nKeys in JSON objects must be wrapped in double quotes (\"), and followed by a colon (:). The only values that must be wrapped in double quotes are strings. As such, string values may not include double quotes unless they are escaped with the backslash like so: \". When there is more than one key-value pair in an object, all but the last key-value pair must be followed by a comma. If there is only one key-value pair, then there should be no comma.\nJSON may also be presented as an array, like so:</p><pre class=\"language-javascript\"><code>[\n\t{\n\t\t\"id\": 21,\n\t\t\"title\": \"A post about JSON\",\n\t\t\"author\": \"Carrie Forde\"\n\t},\n\t{\n\t\t\"id\": 20,\n\t\t\"title\": \"Regex is fun!\",\n\t\t\"author\": \"Carrie Forde\"\n\t}\n]</code></pre><p>While this example contains objects, JSON arrays may contain any of the data types mentioned above. The array format is used widely in WordPress's REST API to lists posts and pages within a WordPress website, for example.\nJSON's ease of use makes it a good choice for working with simple data structures on the web. It's easy to read, flexible, and as easy to work with as JavaScript objects and arrays.</p>"
+            },
+            {
+                "id": 3,
+                "title": "The JSON <code>Stringify</code> method",
+                "category": "JSON",
+                "content": "<p>The JSON stringify method converts a JavaScript object into a JSON string for transmission over the Internet. Let's take a look at the following object:</p><pre class=\"language-javascript\"><code>var music = {\n\t\"title\": \"CS60\",\n\t\"album\": \"III\",\n\t\"genre\": \"Jazz\",\n\t\"trackLength\": 6.88,\n\t\"artists\": [\n\t\t\"Badbadnotgood\"\n\t]\n};</code></pre><p>This is a typical JavaScript object, but we can convert it into a JSON string using the using the <code>JSON.stringify</code> method like so:</p><pre class=\"language-javascript\"><code>var musicStr = JSON.stringify(music);</code></pre><p>And this is the result we'll get:</p><pre class=\"language-javascript\"><code>\"{\"title\":\"CS60\",\"album\":\"III\",\"genre\":\"Jazz\",\"trackLength\":6.88,\"artists\":[\"Badbadnotgood\"]}\"</code></pre><p>You'll notice that the entire object is wrapped in double quotes to make it a string. Each key in the object has also been wrapped in double quotes, as well as any string values. Because objects, arrays, numbers, true and false, undefined, and null are valid values, they will be left untouched.</p><p>A neat thing, but also a bit of a gotcha about the stringify method is that it will omit key-value pairs if a value is equal to <code>undefined</code>. So for example,</p><pre class=\"language-javascript\"><code>var cat = {\n\tname: 'Minnie',\n\tage: 3,\n\toccupation: undefined\n};</code></pre><p>Results in</p><pre class=\"language-javascript\"><code>\"{\"name\":\"Minnie\",\"age\":3}\"</code></pre><p>However, this is only true when we pass an _object_ to the stringify method. If we pass an array to the stringify method that has undefined values, those values will be _maintained_:</p><pre class=\"language-javascript\"><code>var cats = [\n\t'Minnie',\n\t'Whitney',\n\t'Paul',\n\t'K2',\n\tundefined\n];</code></pre><p>Results in:</p><pre class=\"language-javascript\"><code>\"[\"Minnie\",\"Whitney\",\"Paul\",\"K2\",null]\"</code></pre><p>This helps maintain the length of the original array.</p><p>The stringify method can be customized by passing an optional replacer function or array. Using a replacer gives the developer more control over the data resulting from <code>JSON.stringify</code>. For example, let's say we wanted to grab everything _except_ the <code>artists</code> from the following object into our JSON string:</p><pre class=\"language-javascript\"><code>var music = {\n\t\"title\": \"CS60\",\n\t\"album\": \"III\",\n\t\"genre\": \"Jazz\",\n\t\"trackLength\": 6.88,\n\t\"artists\": [\n\t\t\"Badbadnotgood\"\n\t]\n};</code></pre><p>We can use a replacer function to specify that we'd like to skip over the artists:</p><pre class=\"language-javascript\"><code>var musicStr = JSON.stringify(music, function(key, value) {\n\n\t// Check if there is no key (an object, maybe?) or if they is NOT equal to 'artists'.\n\tif (!key || key !== 'artists') {\n\t\treturn value; // return the value.\n\t} else {\n\t\treturn undefined; // otherwise, return undefined, which doesn't end up in a stringified object.\n\t}\n});</code></pre><p>This is our result:</p><pre class=\"language-javascript\"><code>{\"title\":\"CS60\",\"album\":\"III\",\"genre\":\"Jazz\",\"trackLength\":6.88}\"</code></pre><p>Nifty, right? One more sweet trick with stringify is that we can pass an optional third argument, <code>'\t'</code>, which will format our JSON string in a friendlier, more readable way:</p><pre class=\"language-javascript\"><code>var musicStr = JSON.stringify(music, function(key, value) {\n\n\tif (!key || key !== 'artists') {\n\t\treturn value;\n\t} else {\n\t\treturn undefined;\n\t}\n}, '\t');</code></pre><p>which results in:</p><pre class=\"language-javascript\"><code>\"{\n\t\"title\": \"CS60\",\n\t\"album\": \"III\",\n\t\"genre\": \"Jazz\",\n\t\"trackLength\": 6.88\n}\"</code></pre>"
+            },
+            {
+                "id": 4,
+                "title": "HTML5 text manipulation",
+                "category": "HTML",
+                "content": "Lorem ipsum dolor sit amet, partem hendrerit an sed. Commune facilisis ei usu, tantas vituperatoribus ea usu. Saepe mucius oblique in has, no libris malorum maiestatis nec. Adhuc platonem periculis cu mel, amet ponderum elaboraret cu pri."
+            }
+        ]
+    },
+    {
+        "id": "contact",
+        "title": "Contact Me",
+        "contentIntro": "Have a question, or want to collaborate on a project? Get in touch!",
+        "formFields": [
+            {
+                "label": "First Name",
+                "type": "text"
+            },
+            {
+                "label": "Last Name",
+                "type": "text"
+            },
+            {
+                "label": "Email",
+                "type": "email"
+            }
+        ],
+        "socialNetworks": [
+            {
+                "name": "Email",
+                "url": "mailto:carrie@carrieforde.com",
+                "icon": "<i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i>"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/CarrieForde",
+                "icon": "<i class=\"fa fa-twitter\" aria-hidden=\"true\"></i>"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://www.instagram.com/carrieforde/",
+                "icon": "<i class=\"fa fa-instagram\" aria-hidden=\"true\"></i>"
+            },
+            {
+                "name": "Github",
+                "url": "https://github.com/carrieforde",
+                "icon": "<i class=\"fa fa-github\" aria-hidden=\"true\"></i>"
+            },
+            {
+                "name": "CodePen",
+                "url": "http://codepen.io/carrieforde/",
+                "icon": "<i class=\"fa fa-codepen\" aria-hidden=\"true\"></i>"
+            }
+        ]
+    }
+]

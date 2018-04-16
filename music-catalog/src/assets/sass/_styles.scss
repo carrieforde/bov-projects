@@ -1,0 +1,225 @@
+// TYPOGRAPHY
+html {
+	font-size: $base-font-size;
+}
+
+body {
+	background: $background-gradient;
+	color: $text-default-light;
+	font-family: $font-body;
+	font-weight: 400;
+	line-height: unitless-calc($base-line-height, $base-font-size);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 800;
+	letter-spacing: 0.025em;
+	line-height: 1.2;
+	margin: 0 0 0.5em;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+a {
+	color: $color-accent;
+	text-decoration: none;
+	transition: $transition-color;
+
+	&:hover {
+		color: $color-primary;
+	}
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+
+// UTILITY CLASSES
+.list-reset {
+	@include list-reset;
+}
+
+.screen-reader-text {
+	@include screen-reader-text;
+}
+
+
+// BUTTON
+.button {
+
+	&--close {
+		@include close-button($color-white, $background: $color-accent);
+		@include position(absolute, $gutter $gutter null null);
+		
+		border-radius: $base-radius;
+		padding: em(4) em(9) em(7);
+
+		&:hover {
+			background-color: $color-primary;
+		}
+	}
+}
+
+// ALBUM
+.album {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	text-shadow: em(1) em(1) em(4) rgba($color-dark-gray, 0.4);
+
+	&__image {
+		box-shadow: $album-shadow;
+		transition: $transition-box-shadow;
+
+		&:hover {
+			box-shadow: none;
+		}
+	}
+
+	&__name {
+		margin-top: $gutter;
+	}
+
+	&__artist {
+		margin-bottom: 0;
+	}
+}
+
+
+// TRACKLIST
+.tracklist {
+	font-size: em(18);
+
+	&__track {
+		padding: rem(5) 0;
+	}
+}
+
+
+// MODAL
+.modal-container {
+	@include position(fixed, 0 0 0 0);
+
+	background-color: rgba($color-black, 0.5);
+	opacity: 1;
+	transition: $transition-opacity;
+	z-index: 1;
+
+	&--hidden {
+		opacity: 0;
+		transition: $transition-opacity, $transition-z-index;
+		z-index: -20;
+	}
+}
+
+.modal {
+	@include position(absolute, 0 0 0 0);
+
+	background-color: $color-white;
+	color: $color-dark-gray;
+	transition: $transition-left;
+	z-index: 3;
+
+	.modal-container--hidden & {
+		left: 100%;
+		transition: $transition-left;
+		z-index: 2;
+	}
+	
+	@include mq-min($tablet-portrait) {
+
+		@include size(50% 0);
+
+		left: 50%;
+		padding-top: 3 / 2 * 50%; // 2:3 ratio * % width
+		top: 50%;
+		transform: translate(-50%, -50%); // centers element
+	}
+
+	@include mq-min($tablet-landscape) {
+		padding-top: 2 / 3 * 80%; // 3:2 ratio * % width
+		width: 80%;
+	}
+}
+
+.modal-content {
+	@include position(absolute, 0 0 0 0);
+
+	overflow: auto;
+	padding: $gutter;
+
+	@include mq-min($tablet-landscape) {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__header {
+		color: $color-black;
+		flex-basis: 50%;
+		
+		h2 {
+			margin-top: $gutter;
+		}
+		
+		div {
+			padding-bottom: $gutter;
+		}
+	}
+
+	&__content {
+		flex-basis: 40%;
+
+		@include mq-max($tablet-landscape) {
+			margin-top: $gutter * 2;
+		}
+	}
+}
+
+// Keeps background from scrolling when modal is open.
+.modal-open {
+	overflow: hidden;
+}
+
+
+// GRID
+.grid {
+	max-width: 100%;
+	padding: $gutter;
+
+	@include mq-min($tablet-portrait) {
+		display: grid;
+		grid-gap: $gutter * 3 $gutter;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include mq-min($desktop) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+
+// PAGE
+.page {
+	margin: 0 auto;
+	max-width: 100%;
+	padding: $gutter;
+	width: rem(1200);
+
+	&__header {
+		text-align: center;
+	}
+}
+
+.page-title {
+	margin-bottom: 1em;
+}

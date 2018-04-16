@@ -1,0 +1,36 @@
+<section class="modal-container is-hidden">
+	<div id="modal" class="modal" role="dialog" aria-labelledby="modal_label" aria-describedby="modal-1_content" aria-modal="true">
+		<div class="modal-inner">
+			<header class="modal-inner__header">
+				<h2 id="modal-1_label">Shopping Cart</h2>
+				<button type="button" id="closeModal" class="button button--close button--close-modal bg--primary">
+					<span class="hide-text">Close</span>
+					<span class="close close--1 bg--white"></span>
+					<span class="close close--2 bg--white"></span>
+				</button>
+			</header>
+			<section id="cart" class="cart poppins">
+				<header class="cart__header cart__row">
+					<h3 class="cart-col--1">Product</h3>
+					<h3 class="cart-col--2">Price</h3>
+					<h3 class="cart-col--3">Quantity</h3>
+					<h3 class="cart-col--4">Total</h3>
+					<h3 class="cart-col--5 hide-text">Remove</h3>
+				</header>
+				<div class="cart__content"></div>
+				<footer class="cart__footer cart__row">
+					<form class="cart__coupon">
+						<label for="coupon">Coupon</label>
+						<input type="text" id="coupon" class="coupon">
+						<button type="button" id="applyCoupon" class="button">Apply Coupon</button>
+					</form>
+					<span id="cartTotal" class="cart__total cart-col--4 text--black">$total</span>
+				</footer>
+			</section>
+			<footer class="modal-inner__footer">
+				<button type="button" id="continueShopping" class="button button--outline text--primary">Continue Shopping</button>
+				<button type="button" id="checkout" class="button" "disabled">Checkout</button>
+			</footer>
+		</div>
+	</div>
+</section>

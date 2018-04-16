@@ -1,0 +1,80 @@
+//--------------------------------------------------------------
+// CARD
+//--------------------------------------------------------------
+.card {
+	box-shadow: 1px 1px 6px 0 rgba(color(mine-shaft), 0.15);
+	margin-bottom: rem(20);
+	max-width: rem(600);
+	position: relative;
+
+	@include media($tablet-portrait-up, null) {
+		margin-bottom: 0;
+	}
+
+	// An inner wrap is needed for the posts grid layout. Otherwise, without the padding, the posts will break across columns.
+	&__inner-wrap {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: rem(20);
+	}
+
+	&__image {
+		margin: rem(-20) rem(-20) rem(18);
+		position: relative;
+
+		img {
+			display: block;
+		}
+	}
+
+	&__header {
+		margin-top: rem(10);
+	}
+
+	&__title {
+		line-height: 1.25;
+		margin-bottom: 0.25em;
+
+		a {
+			color: color(mine-shaft);
+			text-decoration: none;
+
+			&:hover {
+				color: rgba(color(mine-shaft), 0.8);
+			}
+		}
+	}
+
+	&__content {
+
+		p {
+			margin-bottom: 0.75em;
+		}
+	}
+
+	&__footer {
+		margin-top: auto;
+	}
+} // .card
+
+//--------------------------------------------------------------
+// CATEGORY BADGE
+//--------------------------------------------------------------
+.category-badge {
+	display: inline-block;
+	font-size: em(14);
+	font-weight: 600;
+	letter-spacing: em(1.25);
+	line-height: 1.6;
+	padding: em(5) em(10) em(8);
+	text-transform: uppercase;
+	z-index: 1;
+
+	//-----------------------------------------
+	// Post Card
+	//-----------------------------------------
+	.card & {
+		@include position(absolute, null null rem(-10) rem(10));
+	}
+}

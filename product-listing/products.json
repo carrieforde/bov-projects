@@ -1,0 +1,92 @@
+[
+    {
+       "id": 1,
+       "name": "Tea pot & cup",
+       "description": "Lorem ipsum dolor sit amet, pro ei nullam meliore. Cu nec eripuit placerat.",
+       "image": "tea-pot-and-cup.jpg",
+       "price": {
+           "regular": 30,
+           "sale": 22
+       },
+       "new": false,
+       "sale": true
+    },
+    {
+        "id": 2,
+        "name": "Ceiling lamp",
+        "description": "Lorem ipsum dolor sit amet, pro ei nullam meliore. Cu nec eripuit placerat.",
+        "image": "ceiling-lamp.jpg",
+        "price": {
+            "regular": 30
+        },
+        "new": true,
+        "sale": false
+    },
+    {
+        "id": 3,
+        "name": "Set of 3 cups",
+        "description": "Lorem ipsum dolor sit amet, pro ei nullam meliore. Cu nec eripuit placerat.",
+        "image": "set-of-3-cups.jpg",
+        "price": {
+            "regular": 30
+        },
+        "new": false,
+        "sale": false
+    },
+    {
+        "id": 4,
+        "name": "Stick table lamp",
+        "description": "Lorem ipsum dolor sit amet, pro ei nullam meliore. Cu nec eripuit placerat.",
+        "image": "stick-table-lamp.jpg",
+        "price": {
+            "regular": 30
+        },
+        "new": false,
+        "sale": false
+    },
+    {
+        "id": 5,
+        "name": "Basket shelf",
+        "description": "Lorem ipsum dolor sit amet, pro ei nullam meliore. Cu nec eripuit placerat.",
+        "image": "basket-shelf.jpg",
+        "price": {
+            "regular": 30
+        },
+        "new": true,
+        "sale": false
+    },
+    {
+        "id": 6,
+        "name": "Tumble clock",
+        "description": "Lorem ipsum dolor sit amet, pro ei nullam meliore. Cu nec eripuit placerat.",
+        "image": "tumble-clock.jpg",
+        "price": {
+            "regular": 30
+        },
+        "new": false,
+        "sale": false
+    },
+    {
+        "id": 7,
+        "name": "Simple bulb",
+        "description": "Lorem ipsum dolor sit amet, pro ei nullam meliore. Cu nec eripuit placerat.",
+        "image": "simple-bulb.jpg",
+        "price": {
+            "regular": 30,
+            "sale": 22
+        },
+        "new": false,
+        "sale": true
+    },
+    {
+        "id": 8,
+        "name": "Metallic mini chair",
+        "description": "Lorem ipsum dolor sit amet, pro ei nullam meliore. Cu nec eripuit placerat.",
+        "image": "metallic-mini-chair.jpg",
+        "price": {
+            "regular": 30
+        },
+        "new": false,
+        "sale": false
+    }
+]

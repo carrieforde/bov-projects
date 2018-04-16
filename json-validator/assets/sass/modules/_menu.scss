@@ -1,0 +1,37 @@
+//--------------------------------------------------------------
+// MENU
+//--------------------------------------------------------------
+.menu {
+	@include list-reset;
+
+	display: flex;
+	flex-direction: column;
+
+	@include media($tablet-landscape-up, null) {
+		
+		&:not(.flex-column) {
+			flex-direction: row;
+		}
+	}
+
+	> li {
+		position: relative;
+
+		&.is-toggled {
+
+			.menu__sub-menu {
+				max-height: 100vh; // arbitrary value that allows for reasonable flexibility
+			}
+		}
+	}
+
+	.has-children {
+		padding-right: rem(20) * 1.5;
+	}
+
+	a {
+		display: block;
+		padding: rem(5) rem(10);
+		text-decoration: none;
+	}
+}
